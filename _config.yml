@@ -1,1 +1,6 @@
-theme: jekyll-theme-minimal
+title : ......!
+author : Evenharder
+description : What should I write here?
+github_username : evenharder
+
+theme: minima
