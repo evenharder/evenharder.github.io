@@ -470,6 +470,7 @@ tr, td, th { vertical-align: middle; }
 .notice a { color: #bdc1c4; }
 .notice a:hover { color: #717476; }
 .notice code { background-color: #fcfcfc; }
+.notice pre code { background-color: inherit; }
 .notice ul:last-child { margin-bottom: 0; /* override*/ }
 
 /* Primary notice */
@@ -481,6 +482,7 @@ tr, td, th { vertical-align: middle; }
 .notice--primary a { color: #6f777d; }
 .notice--primary a:hover { color: #43474b; }
 .notice--primary code { background-color: #f8f8f9; }
+.notice--primary pre code { background-color: inherit; }
 .notice--primary ul:last-child { margin-bottom: 0; /* override*/ }
 
 /* Info notice */
@@ -492,6 +494,7 @@ tr, td, th { vertical-align: middle; }
 .notice--info a { color: #3b9cba; }
 .notice--info a:hover { color: #235e70; }
 .notice--info code { background-color: #f5fafc; }
+.notice--info pre code { background-color: inherit; }
 .notice--info ul:last-child { margin-bottom: 0; /* override*/ }
 
 /* Warning notice */
@@ -503,6 +506,7 @@ tr, td, th { vertical-align: middle; }
 .notice--warning a { color: #d67f05; }
 .notice--warning a:hover { color: #804c03; }
 .notice--warning code { background-color: #fdf9f3; }
+.notice--warning pre code { background-color: inherit; }
 .notice--warning ul:last-child { margin-bottom: 0; /* override*/ }
 
 /* Success notice */
@@ -514,6 +518,7 @@ tr, td, th { vertical-align: middle; }
 .notice--success a { color: #3fa63f; }
 .notice--success a:hover { color: #266426; }
 .notice--success code { background-color: #f5fbf5; }
+.notice--success pre code { background-color: inherit; }
 .notice--success ul:last-child { margin-bottom: 0; /* override*/ }
 
 /* Danger notice */
@@ -525,6 +530,7 @@ tr, td, th { vertical-align: middle; }
 .notice--danger a { color: #ee5f5b; }
 .notice--danger a:hover { color: #8f3937; }
 .notice--danger code { background-color: #fef7f7; }
+.notice--danger pre code { background-color: inherit; }
 .notice--danger ul:last-child { margin-bottom: 0; /* override*/ }
 
 /* ========================================================================== MASTHEAD ========================================================================== */
@@ -852,6 +858,7 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
 .social-icons .fa-github, .social-icons .fa-github-alt, .social-icons .fa-github-square { color: #171516; }
 .social-icons .fa-gitlab { color: #e24329; }
 .social-icons .fa-instagram { color: #517fa4; }
+.social-icons .fa-keybase { color: #ef7639; }
 .social-icons .fa-lastfm, .social-icons .fa-lastfm-square { color: #d51007; }
 .social-icons .fa-linkedin, .social-icons .fa-linkedin-in { color: #007bb6; }
 .social-icons .fa-mastodon, .social-icons .fa-mastodon-square { color: #2b90d9; }
@@ -1145,6 +1152,9 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 /* Wide Pages ========================================================================== */
 @media (min-width: 64em) { .wide .archive { padding-right: 0; } }
 @media (min-width: 80em) { .wide .archive { padding-right: 0; } }
+
+/* Place inside a single layout */
+.layout--single .feature__wrapper { display: inline-block; }
 
 /* ========================================================================== SIDEBAR ========================================================================== */
 /* Default ========================================================================== */
