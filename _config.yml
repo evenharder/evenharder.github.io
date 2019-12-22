@@ -2,5 +2,15 @@ title : ......!
 author : Evenharder
 description : What should I write here?
 github_username : evenharder
+github: [metadata] #https://github.com/github/pages-gem/issues/399
 
-theme: minima
+remote_theme: "mmistakes/minimal-mistakes@4.17.2"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
