@@ -9,7 +9,6 @@ excerpt_separator: <!--more-->
 ---
 미루고 미루던 Jekyll 블로그 공사를 진행했습니다.
 
-
 <!--more-->
 정말 Github Page와 Jekyll의 궁합이 좋긴 하네요.
 Minimal Mistakes도 정말 깔끔하고 좋은 테마입니다.

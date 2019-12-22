@@ -8,12 +8,14 @@ github: [metadata]
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: "mmistakes/minimal-mistakes@4.17.2"
+minimal_mistakes_skin: "aqua"
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: Asia/Seoul
+locale: "ko-KR"
 
 include:
   - _pages
@@ -70,4 +72,6 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+encoding: "utf-8"
 
