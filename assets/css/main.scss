@@ -6,13 +6,16 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes";
 
-@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
-// https://github.com/mmistakes/minimal-mistakes/issues/1219
-$sans-serif: "Noto Sans KR";
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR|Ubuntu+Mono);    
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Noto Sans KR', sans-serif;
+}
 
+// https://github.com/mmistakes/minimal-mistakes/issues/1219
 html {
   font-size: 12px; // change to whatever
-
+  
   @include breakpoint($medium) {
     font-size: 14px; // change to whatever
   }
