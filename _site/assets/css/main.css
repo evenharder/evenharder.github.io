@@ -24,6 +24,7 @@
 /* Other ========================================================================== */
 /* Mixins and functions */
 /* Magnific Popup CSS */
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 .mfp-counter { font-family: Georgia, Times, serif; }
 
 .mfp-bg { top: 0; left: 0; width: 100%; height: 100%; z-index: 1042; overflow: hidden; position: fixed; background: #000; opacity: 0.8; filter: alpha(opacity=80); }
@@ -1255,3 +1256,7 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
   .page__hero-caption a { color: #000 !important; }
   /* Hide the following elements on print ========================================================================== */
   .masthead, .toc, .page__share, .page__related, .pagination, .ads, .page__footer, .page__comments-form, .author__avatar, .author__content, .author__urls-wrapper, .nav__list, .sidebar, .adsbygoogle { display: none !important; height: 1px !important; } }
+html { font-size: 12px; }
+@media (min-width: 48em) { html { font-size: 14px; } }
+@media (min-width: 64em) { html { font-size: 16px; } }
+@media (min-width: 80em) { html { font-size: 18px; } }
