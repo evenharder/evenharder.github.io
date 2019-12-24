@@ -8,4 +8,9 @@ var store = [{
         "excerpt":"Jekyll 같은 정적 웹페이지 생성기는 편하지만, 글꼴처럼 세부 설정을 건드리는 건 편하지 않습니다. 첫 포스트에서 추천드린 이 repo에는 _sass, _includes, _layouts 등 디렉토리가 없습니다. 그럼에도 불구하고 잘 작동하는 이유는 remote에 있는 설정을 그대로 가져다가 쓰기 때문입니다. 때문에, 이쪽 관련된 설정을 건드리는 건 얼핏 보기엔 쉬워 보이지 않습니다. 몇 시간에 걸친...","categories": ["blog"],
         "tags": ["Jekyll"],
         "url": "http://localhost:4000/blog/jekyll-change-fonts/",
+        "teaser":null},{
+        "title": "Sibelius Violin Concerto in D minor, Op. 47",
+        "excerpt":"듣고 왜 이 협주곡을 이전에 알지 못했을까 싶었습니다.     이 NAVER 지식백과의 칼럼을 통해 배경과 음악적 느낌을 접하시면 될 것 같습니다.   연주 시간은 대략 27분에서 33분 정도입니다.       연주도 일품이지만, 막심 벤게로프의 표정 변화를 보며 웃음을 참지 못하는 분들도 있으리라 생각합니다.  ","categories": ["music"],
+        "tags": ["classic"],
+        "url": "http://localhost:4000/music/sibelius-violin-concerto/",
         "teaser":null}]

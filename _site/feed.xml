@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-23T01:13:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">Jekyll 기반 블로그 글꼴 수정하기</title><link href="http://localhost:4000/blog/jekyll-change-fonts/" rel="alternate" type="text/html" title="Jekyll 기반 블로그 글꼴 수정하기" /><published>2019-12-22T20:00:00+09:00</published><updated>2019-12-22T20:00:00+09:00</updated><id>http://localhost:4000/blog/jekyll-change-fonts</id><content type="html" xml:base="http://localhost:4000/blog/jekyll-change-fonts/">&lt;p&gt;Jekyll 같은 정적 웹페이지 생성기는 편하지만, 글꼴처럼 세부 설정을 건드리는 건
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-24T19:58:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">Sibelius Violin Concerto in D minor, Op. 47</title><link href="http://localhost:4000/music/sibelius-violin-concerto/" rel="alternate" type="text/html" title="Sibelius Violin Concerto in D minor, Op. 47" /><published>2019-12-23T01:00:00+09:00</published><updated>2019-12-23T01:00:00+09:00</updated><id>http://localhost:4000/music/sibelius-violin-concerto</id><content type="html" xml:base="http://localhost:4000/music/sibelius-violin-concerto/">&lt;p&gt;듣고 왜 이 협주곡을 이전에 알지 못했을까 싶었습니다.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://terms.naver.com/entry.nhn?cid=59000&amp;amp;docId=3571046&amp;amp;categoryId=59000&quot;&gt;이 NAVER 지식백과&lt;/a&gt;의 칼럼을 통해
+배경과 음악적 느낌을 접하시면 될 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;연주 시간은 대략 27분에서 33분 정도입니다.&lt;/p&gt;
+
+&lt;!--[![IMAGE ALT TEXT](http://img.youtube.com/vi/YsbrRAgv1b4/0.jpg)](http://www.youtube.com/watch?v=YsbrRAgv1b4 &quot;Video Title&quot;) --&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/YsbrRAgv1b4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;
+연주도 일품이지만, 막심 벤게로프의 표정 변화를 보며 웃음을 참지 못하는 분들도 있으리라 생각합니다.&lt;/p&gt;</content><author><name>Sangheon Lee</name></author><category term="classic" /><summary type="html">듣고 왜 이 협주곡을 이전에 알지 못했을까 싶었습니다.</summary></entry><entry><title type="html">Jekyll 기반 블로그 글꼴 수정하기</title><link href="http://localhost:4000/blog/jekyll-change-fonts/" rel="alternate" type="text/html" title="Jekyll 기반 블로그 글꼴 수정하기" /><published>2019-12-22T20:00:00+09:00</published><updated>2019-12-22T20:00:00+09:00</updated><id>http://localhost:4000/blog/jekyll-change-fonts</id><content type="html" xml:base="http://localhost:4000/blog/jekyll-change-fonts/">&lt;p&gt;Jekyll 같은 정적 웹페이지 생성기는 편하지만, 글꼴처럼 세부 설정을 건드리는 건
 편하지 않습니다.&lt;/p&gt;
 
 &lt;!--more--&gt;
