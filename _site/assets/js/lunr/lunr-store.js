@@ -18,4 +18,9 @@ var store = [{
         "excerpt":"수식을 보기 좋게 렌더링해주는 MathJax를 추가하였습니다.     $ e^{\\pi i} + 1 = 0$ 같이 인라인 수식도,     같은 수식도 쓸 수 있습니다.   이 포스트 의 도움을 받아 쉽게 추가할 수 있었습니다.   ","categories": ["blog"],
         "tags": ["Jekyll"],
         "url": "http://localhost:4000/blog/add-mathjax/",
+        "teaser":null},{
+        "title": "Persistent Segment Tree w/ BOJ 13538",
+        "excerpt":"헷갈리던 Persistent Segment Tree를 드디어 이해했습니다. Persistent Segment Tree란, 크기 $N$의 segment tree가 총 $M$번 상태 변화가 일어날 때, 이를 공간 복잡도 $O(N + M \\lg N)$에 저장하는 자료구조입니다. 대표적인 예시로 2차원 격자에서, 점 갱신이 일어나지 않을 때 $x_1 \\leq x \\leq x_2$이면서 $y_1 \\leq y \\leq y_2$를 만족하는 점의...","categories": ["algo"],
+        "tags": ["PS","Data Structure"],
+        "url": "http://localhost:4000/algo/persistent-segment-tree-xor-query/",
         "teaser":null}]
