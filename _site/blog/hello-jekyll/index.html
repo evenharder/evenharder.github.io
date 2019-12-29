@@ -429,6 +429,36 @@ C++이나 Python 문법도 잘 모릅니다. 조금씩 배우는 과정을 올�
     
     <h2 class="archive__item-title" itemprop="headline">
       
+        <a href="/blog/add-mathjax/" rel="permalink">블로그에 MathJax 추가
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">수식을 보기 좋게 렌더링해주는 [MathJax[(https://www.mathjax.org/)를 추가하였습니다.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
         <a href="/music/sibelius-violin-concerto/" rel="permalink">Sibelius Violin Concerto in D minor, Op. 47
 </a>
       
@@ -524,7 +554,11 @@ C++이나 Python 문법도 잘 모릅니다. 조금씩 배우는 과정을 올�
       </footer>
     </div>
 
-    
+    <!--
+  + https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/scripts.html 
+  + Revision 8444d54 on Jun 28, 2019 / Retrieve Dec 29, 2019
+-->
+
   <script src="/assets/js/main.min.js"></script>
   <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
 
@@ -538,6 +572,30 @@ C++이나 Python 문법도 잘 모릅니다. 조금씩 배우는 과정을 올�
 
 
 
+
+
+<!--
+  + MathJax
+  + credit : https://www.janmeppe.com/blog/How-to-add-mathjax-to-minimal-mistakes/
+  + Retrived Dec 29, 2019
+-->
+
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+     extensions: ["tex2jax.js"],
+     jax: ["input/TeX", "output/HTML-CSS"],
+     tex2jax: {
+       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+       processEscapes: true
+     },
+     "HTML-CSS": { availableFonts: ["TeX"] }
+   });
+</script>
 
 
 

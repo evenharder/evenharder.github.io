@@ -13,4 +13,9 @@ var store = [{
         "excerpt":"듣고 왜 이 협주곡을 이전에 알지 못했을까 싶었습니다.     이 NAVER 지식백과의 칼럼을 통해 배경과 음악적 느낌을 접하시면 될 것 같습니다.   연주 시간은 대략 27분에서 33분 정도입니다.       연주도 일품이지만, 막심 벤게로프의 표정 변화를 보며 웃음을 참지 못하는 분들도 있으리라 생각합니다.  ","categories": ["music"],
         "tags": ["classic"],
         "url": "http://localhost:4000/music/sibelius-violin-concerto/",
+        "teaser":null},{
+        "title": "블로그에 MathJax 추가",
+        "excerpt":"수식을 보기 좋게 렌더링해주는 [MathJax[(https://www.mathjax.org/)를 추가하였습니다.     $ e^{\\pi i} + 1 = 0$ 같이 인라인 수식도,     같은 수식도 쓸 수 있습니다.   이 포스트 의 도움을 받아 쉽게 추가할 수 있었습니다.   ","categories": ["blog"],
+        "tags": ["Jekyll"],
+        "url": "http://localhost:4000/blog/add-mathjax/",
         "teaser":null}]
