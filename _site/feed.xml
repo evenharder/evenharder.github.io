@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-24T19:58:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">Sibelius Violin Concerto in D minor, Op. 47</title><link href="http://localhost:4000/music/sibelius-violin-concerto/" rel="alternate" type="text/html" title="Sibelius Violin Concerto in D minor, Op. 47" /><published>2019-12-23T01:00:00+09:00</published><updated>2019-12-23T01:00:00+09:00</updated><id>http://localhost:4000/music/sibelius-violin-concerto</id><content type="html" xml:base="http://localhost:4000/music/sibelius-violin-concerto/">&lt;p&gt;듣고 왜 이 협주곡을 이전에 알지 못했을까 싶었습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-29T17:58:57+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">블로그에 MathJax 추가</title><link href="http://localhost:4000/blog/add-mathjax/" rel="alternate" type="text/html" title="블로그에 MathJax 추가" /><published>2019-12-29T17:00:00+09:00</published><updated>2019-12-29T17:00:00+09:00</updated><id>http://localhost:4000/blog/add-mathjax</id><content type="html" xml:base="http://localhost:4000/blog/add-mathjax/">&lt;p&gt;수식을 보기 좋게 렌더링해주는 [MathJax[(https://www.mathjax.org/)를 추가하였습니다.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;$ e^{\pi i} + 1 = 0$ 같이 인라인 수식도,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;a^2 + b^2 = c^2&lt;/script&gt;
+
+&lt;p&gt;같은 수식도 쓸 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.janmeppe.com/blog/How-to-add-mathjax-to-minimal-mistakes/&quot;&gt;이 포스트&lt;/a&gt;
+의 도움을 받아 쉽게 추가할 수 있었습니다.&lt;/p&gt;</content><author><name>Sangheon Lee</name></author><category term="Jekyll" /><summary type="html">수식을 보기 좋게 렌더링해주는 [MathJax[(https://www.mathjax.org/)를 추가하였습니다.</summary></entry><entry><title type="html">Sibelius Violin Concerto in D minor, Op. 47</title><link href="http://localhost:4000/music/sibelius-violin-concerto/" rel="alternate" type="text/html" title="Sibelius Violin Concerto in D minor, Op. 47" /><published>2019-12-23T01:00:00+09:00</published><updated>2019-12-23T01:00:00+09:00</updated><id>http://localhost:4000/music/sibelius-violin-concerto</id><content type="html" xml:base="http://localhost:4000/music/sibelius-violin-concerto/">&lt;p&gt;듣고 왜 이 협주곡을 이전에 알지 못했을까 싶었습니다.&lt;/p&gt;
 
 &lt;!--more--&gt;
 

@@ -344,7 +344,11 @@
       </footer>
     </div>
 
-    
+    <!--
+  + https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/scripts.html 
+  + Revision 8444d54 on Jun 28, 2019 / Retrieve Dec 29, 2019
+-->
+
   <script src="/assets/js/main.min.js"></script>
   <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
 
@@ -358,6 +362,30 @@
 
 
 
+
+
+<!--
+  + MathJax
+  + credit : https://www.janmeppe.com/blog/How-to-add-mathjax-to-minimal-mistakes/
+  + Retrived Dec 29, 2019
+-->
+
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+     extensions: ["tex2jax.js"],
+     jax: ["input/TeX", "output/HTML-CSS"],
+     tex2jax: {
+       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+       processEscapes: true
+     },
+     "HTML-CSS": { availableFonts: ["TeX"] }
+   });
+</script>
 
 
 
