@@ -15,7 +15,7 @@ var store = [{
         "url": "http://localhost:4000/music/sibelius-violin-concerto/",
         "teaser":null},{
         "title": "블로그에 MathJax 추가",
-        "excerpt":"수식을 보기 좋게 렌더링해주는 [MathJax[(https://www.mathjax.org/)를 추가하였습니다.     $ e^{\\pi i} + 1 = 0$ 같이 인라인 수식도,     같은 수식도 쓸 수 있습니다.   이 포스트 의 도움을 받아 쉽게 추가할 수 있었습니다.   ","categories": ["blog"],
+        "excerpt":"수식을 보기 좋게 렌더링해주는 MathJax를 추가하였습니다.     $ e^{\\pi i} + 1 = 0$ 같이 인라인 수식도,     같은 수식도 쓸 수 있습니다.   이 포스트 의 도움을 받아 쉽게 추가할 수 있었습니다.   ","categories": ["blog"],
         "tags": ["Jekyll"],
         "url": "http://localhost:4000/blog/add-mathjax/",
         "teaser":null}]

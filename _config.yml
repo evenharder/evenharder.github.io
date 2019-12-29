@@ -43,10 +43,26 @@ plugins:
   - jekyll-seo-tag
 
 author:
-  name   : "Sangheon Lee"
-  avatar : "/assets/images/cheer_potato.png"
-  bio    : "여기에 무얼 적으면 좋을까요?"
-
+  name          : "Sangheon Lee"
+  avatar        : "/assets/images/cheer_potato.png"
+  bio           : "여기에 무얼 적으면 좋을까요?"
+  location      : "Seoul, Korea"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: mailto:comp.evenharder@gmail.com
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/evenharder"
+    - label: "BOJ"
+      url: "https://www.acmicpc.net/user/evenharder"
+# "https://www.acmicpc.net/favicon.ico"
+    - label: "Codeforces"
+      url: "https://codeforces.com/profile/evenharder"
+# "http://sta.codeforces.com/s/44087/favicon-96x96.png"      
+    - label: "AtCoder"
+      url: "https://atcoder.jp/users/evenharder"
+# "https://atcoder.jp/favicon.ico"
 defaults:
   # _posts
   - scope:
