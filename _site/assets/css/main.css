@@ -1262,3 +1262,5 @@ html { font-size: 12px; }
 @media (min-width: 80em) { html { font-size: 18px; } }
 
 .highlight { font-family: "Ubuntu Mono"; font-size: 1.12em; }
+
+.language-plaintext { font-family: "Ubuntu Mono"; font-size: 1em; background: #c0ffee; }
