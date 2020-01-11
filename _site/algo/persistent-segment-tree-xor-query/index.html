@@ -320,7 +320,7 @@
 
 <p>코드는 <a href="https://cubelover.tistory.com/15">cubelover님의 코드</a>와 매우 흡사하게 진행됩니다.</p>
 
-<h3 id="요구-사항">요구 사항</h3>
+<h1 id="요구-사항">요구 사항</h1>
 
 <p>이 문제의 골자는 다음과 같습니다. 배열 $A$가 있을 때,</p>
 
@@ -334,9 +334,10 @@
 
 <p><code class="language-plaintext highlighter-rouge">root[i]</code>를 <code class="language-plaintext highlighter-rouge">i</code>번째 값까지 추가한 세그먼트 트리의 root라고 하면, <code class="language-plaintext highlighter-rouge">root[i]</code>의 값이 갱신되는 경우는 없음을 알 수 있습니다. 마지막 원소를 삭제하는 건 갱신이 아닌 삭제이고, 이전의 <code class="language-plaintext highlighter-rouge">root[i]</code>에는 영향을 미치지 않기 때문에 갱신이 아닙니다.</p>
 
+<h1 id="pst-코드">PST 코드</h1>
 <p>코드와 함께, 이 쿼리들을 어떻게 처리하는지 보도록 하겠습니다.</p>
 
-<h3 id="node-구조체"><code class="language-plaintext highlighter-rouge">node</code> 구조체</h3>
+<h2 id="node-구조체"><code class="language-plaintext highlighter-rouge">node</code> 구조체</h2>
 
 <p>Persistent Segment Tree의 각 노드는 이진 트리답게, 왼쪽 / 오른쪽 자식을 가리키는 포인터와 현재 값을 저장합니다.</p>
 
@@ -358,7 +359,7 @@
 <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">node</span> <span class="n">a</span><span class="p">[(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="mi">20</span> <span class="o">*</span> <span class="mi">500000</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="o">*</span><span class="n">root</span><span class="p">[</span><span class="mi">500005</span><span class="p">];</span>
 </code></pre></div></div>
 
-<h3 id="초기화">초기화</h3>
+<h2 id="초기화">초기화</h2>
 
 <p>PST의 기본이 되는 <code class="language-plaintext highlighter-rouge">root[0]</code> 세그트리입니다. 모든 값을 0으로 세팅하고, 자식 관계만 설정해주되 리프 노드는 그대로 내버려둡니다. 이러면 의미상 <code class="language-plaintext highlighter-rouge">a[1]</code>이 <code class="language-plaintext highlighter-rouge">root[0]</code>이 되며, <code class="language-plaintext highlighter-rouge">a[0]</code>은 null pointer를 의미하게 됩니다. 이는 1-index 세그먼트 트리랑 비슷합니다.</p>
 
@@ -373,7 +374,7 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h3 id="세그먼트-트리-생성">세그먼트 트리 생성</h3>
+<h2 id="세그먼트-트리-생성">세그먼트 트리 생성</h2>
 
 <p>기존 세그먼트 트리들로부터 새로운 세그먼트 트리를 생성하는 과정입니다. 알고리즘을 생각하면 그리 어렵진 않습니다.</p>
 
@@ -411,7 +412,7 @@
 
 <p>중요한 점은, <code class="language-plaintext highlighter-rouge">root[i]</code>는 1번째 수부터 i번째 수까지 추가된 세그트리라는 사실입니다. 밑에서 서술된 쿼리 함수들은 이 성질에 기반해 작동합니다.</p>
 
-<h3 id="구간-최대-xor-쿼리">구간 최대 XOR 쿼리</h3>
+<h2 id="구간-최대-xor-쿼리">구간 최대 XOR 쿼리</h2>
 
 <p>이 문제에서 가장 복잡하면서 흔치 않은 쿼리가 아닌가 생각됩니다. 변화가 점층적으로 이루어진다는 점에 기반하여, i번째부터 j번째 세그먼트 트리를 보고 싶으면 <code class="language-plaintext highlighter-rouge">root[j]</code>와 <code class="language-plaintext highlighter-rouge">root[i-1]</code>를 비교해가며 따지면 됩니다. prefix sum의 개념과 비슷합니다.</p>
 
@@ -437,7 +438,7 @@
 
 <p>이 함수를 통해 2번 쿼리를 해결할 수 있습니다.</p>
 
-<h3 id="구간-원소-개수-쿼리">구간 원소 개수 쿼리</h3>
+<h2 id="구간-원소-개수-쿼리">구간 원소 개수 쿼리</h2>
 
 <p>j번째 세그트리에서 원소의 개수를 따지는 건 어렵지 않습니다. 역시 <code class="language-plaintext highlighter-rouge">x</code>의 비트를 따져가면서 1이면 (왼쪽) + (오른쪽 재귀), 0이면 (왼쪽 재귀)를 더하면 됩니다.</p>
 
@@ -456,7 +457,7 @@
 
 <p>이 쿼리를 통해 4번 쿼리를 해결할 수 있습니다 (2번 호출하면 됩니다).</p>
 
-<h3 id="구간-k번째-원소-쿼리">구간 k번째 원소 쿼리</h3>
+<h2 id="구간-k번째-원소-쿼리">구간 k번째 원소 쿼리</h2>
 
 <p>위에 있던 XOR 쿼리와 비슷하게, <code class="language-plaintext highlighter-rouge">e</code>에서 <code class="language-plaintext highlighter-rouge">s</code>를 뺀 게 실제로 우리가 보아야 할 유효한 구간입니다. 답이 되는 index를 포함하는 쪽으로 재귀 함수를 호출합니다.</p>
 
@@ -474,7 +475,7 @@
 
 <p>이 함수로 5번 쿼리를 해결할 수 있습니다.</p>
 
-<h3 id="main-함수"><code class="language-plaintext highlighter-rouge">main</code> 함수</h3>
+<h2 id="main-함수"><code class="language-plaintext highlighter-rouge">main</code> 함수</h2>
 
 <p>나머지 3번 쿼리는<code class="language-plaintext highlighter-rouge">main</code> 함수에서 카운터를 감소하는 걸로 처리할 수 있고, 이제 쿼리만 호출하면 됩니다.</p>
 

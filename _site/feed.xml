@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-01-11T13:42:42+09:00</updated><id>/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">Persistent Segment Tree w/ BOJ 13538</title><link href="/algo/persistent-segment-tree-xor-query/" rel="alternate" type="text/html" title="Persistent Segment Tree w/ BOJ 13538" /><published>2019-12-29T19:30:00+09:00</published><updated>2019-12-29T19:30:00+09:00</updated><id>/algo/persistent-segment-tree-xor-query</id><content type="html" xml:base="/algo/persistent-segment-tree-xor-query/">&lt;p&gt;헷갈리던 Persistent Segment Tree를 드디어 이해했습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-01-11T13:48:03+09:00</updated><id>/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">Persistent Segment Tree w/ BOJ 13538</title><link href="/algo/persistent-segment-tree-xor-query/" rel="alternate" type="text/html" title="Persistent Segment Tree w/ BOJ 13538" /><published>2019-12-29T19:30:00+09:00</published><updated>2019-12-29T19:30:00+09:00</updated><id>/algo/persistent-segment-tree-xor-query</id><content type="html" xml:base="/algo/persistent-segment-tree-xor-query/">&lt;p&gt;헷갈리던 Persistent Segment Tree를 드디어 이해했습니다.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -8,7 +8,7 @@
 
 &lt;p&gt;코드는 &lt;a href=&quot;https://cubelover.tistory.com/15&quot;&gt;cubelover님의 코드&lt;/a&gt;와 매우 흡사하게 진행됩니다.&lt;/p&gt;
 
-&lt;h3 id=&quot;요구-사항&quot;&gt;요구 사항&lt;/h3&gt;
+&lt;h1 id=&quot;요구-사항&quot;&gt;요구 사항&lt;/h1&gt;
 
 &lt;p&gt;이 문제의 골자는 다음과 같습니다. 배열 $A$가 있을 때,&lt;/p&gt;
 
@@ -22,9 +22,10 @@
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root[i]&lt;/code&gt;를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt;번째 값까지 추가한 세그먼트 트리의 root라고 하면, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root[i]&lt;/code&gt;의 값이 갱신되는 경우는 없음을 알 수 있습니다. 마지막 원소를 삭제하는 건 갱신이 아닌 삭제이고, 이전의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root[i]&lt;/code&gt;에는 영향을 미치지 않기 때문에 갱신이 아닙니다.&lt;/p&gt;
 
+&lt;h1 id=&quot;pst-코드&quot;&gt;PST 코드&lt;/h1&gt;
 &lt;p&gt;코드와 함께, 이 쿼리들을 어떻게 처리하는지 보도록 하겠습니다.&lt;/p&gt;
 
-&lt;h3 id=&quot;node-구조체&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node&lt;/code&gt; 구조체&lt;/h3&gt;
+&lt;h2 id=&quot;node-구조체&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node&lt;/code&gt; 구조체&lt;/h2&gt;
 
 &lt;p&gt;Persistent Segment Tree의 각 노드는 이진 트리답게, 왼쪽 / 오른쪽 자식을 가리키는 포인터와 현재 값을 저장합니다.&lt;/p&gt;
 
@@ -46,7 +47,7 @@
 &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500000&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500005&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;초기화&quot;&gt;초기화&lt;/h3&gt;
+&lt;h2 id=&quot;초기화&quot;&gt;초기화&lt;/h2&gt;
 
 &lt;p&gt;PST의 기본이 되는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root[0]&lt;/code&gt; 세그트리입니다. 모든 값을 0으로 세팅하고, 자식 관계만 설정해주되 리프 노드는 그대로 내버려둡니다. 이러면 의미상 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a[1]&lt;/code&gt;이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root[0]&lt;/code&gt;이 되며, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a[0]&lt;/code&gt;은 null pointer를 의미하게 됩니다. 이는 1-index 세그먼트 트리랑 비슷합니다.&lt;/p&gt;
 
@@ -61,7 +62,7 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;세그먼트-트리-생성&quot;&gt;세그먼트 트리 생성&lt;/h3&gt;
+&lt;h2 id=&quot;세그먼트-트리-생성&quot;&gt;세그먼트 트리 생성&lt;/h2&gt;
 
 &lt;p&gt;기존 세그먼트 트리들로부터 새로운 세그먼트 트리를 생성하는 과정입니다. 알고리즘을 생각하면 그리 어렵진 않습니다.&lt;/p&gt;
 
@@ -99,7 +100,7 @@
 
 &lt;p&gt;중요한 점은, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root[i]&lt;/code&gt;는 1번째 수부터 i번째 수까지 추가된 세그트리라는 사실입니다. 밑에서 서술된 쿼리 함수들은 이 성질에 기반해 작동합니다.&lt;/p&gt;
 
-&lt;h3 id=&quot;구간-최대-xor-쿼리&quot;&gt;구간 최대 XOR 쿼리&lt;/h3&gt;
+&lt;h2 id=&quot;구간-최대-xor-쿼리&quot;&gt;구간 최대 XOR 쿼리&lt;/h2&gt;
 
 &lt;p&gt;이 문제에서 가장 복잡하면서 흔치 않은 쿼리가 아닌가 생각됩니다. 변화가 점층적으로 이루어진다는 점에 기반하여, i번째부터 j번째 세그먼트 트리를 보고 싶으면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root[j]&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;root[i-1]&lt;/code&gt;를 비교해가며 따지면 됩니다. prefix sum의 개념과 비슷합니다.&lt;/p&gt;
 
@@ -125,7 +126,7 @@
 
 &lt;p&gt;이 함수를 통해 2번 쿼리를 해결할 수 있습니다.&lt;/p&gt;
 
-&lt;h3 id=&quot;구간-원소-개수-쿼리&quot;&gt;구간 원소 개수 쿼리&lt;/h3&gt;
+&lt;h2 id=&quot;구간-원소-개수-쿼리&quot;&gt;구간 원소 개수 쿼리&lt;/h2&gt;
 
 &lt;p&gt;j번째 세그트리에서 원소의 개수를 따지는 건 어렵지 않습니다. 역시 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;의 비트를 따져가면서 1이면 (왼쪽) + (오른쪽 재귀), 0이면 (왼쪽 재귀)를 더하면 됩니다.&lt;/p&gt;
 
@@ -144,7 +145,7 @@
 
 &lt;p&gt;이 쿼리를 통해 4번 쿼리를 해결할 수 있습니다 (2번 호출하면 됩니다).&lt;/p&gt;
 
-&lt;h3 id=&quot;구간-k번째-원소-쿼리&quot;&gt;구간 k번째 원소 쿼리&lt;/h3&gt;
+&lt;h2 id=&quot;구간-k번째-원소-쿼리&quot;&gt;구간 k번째 원소 쿼리&lt;/h2&gt;
 
 &lt;p&gt;위에 있던 XOR 쿼리와 비슷하게, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;e&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;s&lt;/code&gt;를 뺀 게 실제로 우리가 보아야 할 유효한 구간입니다. 답이 되는 index를 포함하는 쪽으로 재귀 함수를 호출합니다.&lt;/p&gt;
 
@@ -162,7 +163,7 @@
 
 &lt;p&gt;이 함수로 5번 쿼리를 해결할 수 있습니다.&lt;/p&gt;
 
-&lt;h3 id=&quot;main-함수&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; 함수&lt;/h3&gt;
+&lt;h2 id=&quot;main-함수&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; 함수&lt;/h2&gt;
 
 &lt;p&gt;나머지 3번 쿼리는&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; 함수에서 카운터를 감소하는 걸로 처리할 수 있고, 이제 쿼리만 호출하면 됩니다.&lt;/p&gt;
 
@@ -241,7 +242,7 @@ remote에 있는 설정을 그대로 가져다가 쓰기 때문입니다.
 &lt;p&gt;몇 시간에 걸친 구글링과 삽질을 통해, 블로그 전체에 ‘Noto Sans KR’과
 ‘Ubuntu Mono’를 적용하고, 글꼴 크기를 조금 줄여 적용할 수 있었습니다.&lt;/p&gt;
 
-&lt;h2 id=&quot;글꼴-설정-방법&quot;&gt;글꼴 설정 방법&lt;/h2&gt;
+&lt;h1 id=&quot;글꼴-설정-방법&quot;&gt;글꼴 설정 방법&lt;/h1&gt;
 &lt;p&gt;많은 사람들이 글꼴을 설정하고 싶어했습니다. &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes/issues/1219&quot;&gt;이 issue&lt;/a&gt;
 또한 예외는 아니었습니다. 해당 글에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_sass&lt;/code&gt; 폴더 어딘가의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_variables.scss&lt;/code&gt;나
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_reset.scss&lt;/code&gt;를 덮어쓰는 기존의 해결법이 설정과 꼬일 수 있어서 좋지 않다고
