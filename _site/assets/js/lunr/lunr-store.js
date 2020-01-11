@@ -5,7 +5,7 @@ var store = [{
         "url": "/blog/hello-jekyll/",
         "teaser":null},{
         "title": "Jekyll 기반 블로그 글꼴 수정하기",
-        "excerpt":"Jekyll 같은 정적 웹페이지 생성기는 편하지만, 글꼴처럼 세부 설정을 건드리는 건 편하지 않습니다. 첫 포스트에서 추천드린 이 repo에는 _sass, _includes, _layouts 등 디렉토리가 없습니다. 그럼에도 불구하고 잘 작동하는 이유는 remote에 있는 설정을 그대로 가져다가 쓰기 때문입니다. 때문에, 이쪽 관련된 설정을 건드리는 건 얼핏 보기엔 쉬워 보이지 않습니다. 몇 시간에 걸친...","categories": ["blog"],
+        "excerpt":"Jekyll 같은 정적 웹페이지 생성기는 편하지만, 글꼴처럼 세부 설정을 건드리는 건 편하지 않습니다. (2020.01.11 수정. language-plaintext 쪽을 추가했습니다.) 첫 포스트에서 추천드린 이 repo에는 _sass, _includes, _layouts 등 디렉토리가 없습니다. 그럼에도 불구하고 잘 작동하는 이유는 remote에 있는 설정을 그대로 가져다가 쓰기 때문입니다. 때문에, 이쪽 관련된 설정을 건드리는 건 얼핏 보기엔 쉬워...","categories": ["blog"],
         "tags": ["Jekyll"],
         "url": "/blog/jekyll-change-fonts/",
         "teaser":null},{

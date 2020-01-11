@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-01-11T13:32:08+09:00</updated><id>/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">Persistent Segment Tree w/ BOJ 13538</title><link href="/algo/persistent-segment-tree-xor-query/" rel="alternate" type="text/html" title="Persistent Segment Tree w/ BOJ 13538" /><published>2019-12-29T19:30:00+09:00</published><updated>2019-12-29T19:30:00+09:00</updated><id>/algo/persistent-segment-tree-xor-query</id><content type="html" xml:base="/algo/persistent-segment-tree-xor-query/">&lt;p&gt;헷갈리던 Persistent Segment Tree를 드디어 이해했습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-01-11T13:42:42+09:00</updated><id>/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">Persistent Segment Tree w/ BOJ 13538</title><link href="/algo/persistent-segment-tree-xor-query/" rel="alternate" type="text/html" title="Persistent Segment Tree w/ BOJ 13538" /><published>2019-12-29T19:30:00+09:00</published><updated>2019-12-29T19:30:00+09:00</updated><id>/algo/persistent-segment-tree-xor-query</id><content type="html" xml:base="/algo/persistent-segment-tree-xor-query/">&lt;p&gt;헷갈리던 Persistent Segment Tree를 드디어 이해했습니다.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -227,10 +227,12 @@
 &lt;!--[![IMAGE ALT TEXT](http://img.youtube.com/vi/YsbrRAgv1b4/0.jpg)](http://www.youtube.com/watch?v=YsbrRAgv1b4 &quot;Video Title&quot;) --&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/YsbrRAgv1b4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;
-연주도 일품이지만, 막심 벤게로프의 표정 변화를 보며 웃음을 참지 못하는 분들도 있으리라 생각합니다.&lt;/p&gt;</content><author><name>Sangheon Lee</name></author><category term="classic" /><summary type="html">듣고 왜 이 협주곡을 이전에 알지 못했을까 싶었습니다.</summary></entry><entry><title type="html">Jekyll 기반 블로그 글꼴 수정하기</title><link href="/blog/jekyll-change-fonts/" rel="alternate" type="text/html" title="Jekyll 기반 블로그 글꼴 수정하기" /><published>2019-12-22T20:00:00+09:00</published><updated>2019-12-22T20:00:00+09:00</updated><id>/blog/jekyll-change-fonts</id><content type="html" xml:base="/blog/jekyll-change-fonts/">&lt;p&gt;Jekyll 같은 정적 웹페이지 생성기는 편하지만, 글꼴처럼 세부 설정을 건드리는 건
+연주도 일품이지만, 막심 벤게로프의 표정 변화를 보며 웃음을 참지 못하는 분들도 있으리라 생각합니다.&lt;/p&gt;</content><author><name>Sangheon Lee</name></author><category term="classic" /><summary type="html">듣고 왜 이 협주곡을 이전에 알지 못했을까 싶었습니다.</summary></entry><entry><title type="html">Jekyll 기반 블로그 글꼴 수정하기</title><link href="/blog/jekyll-change-fonts/" rel="alternate" type="text/html" title="Jekyll 기반 블로그 글꼴 수정하기" /><published>2019-12-22T20:00:00+09:00</published><updated>2020-01-11T13:40:00+09:00</updated><id>/blog/jekyll-change-fonts</id><content type="html" xml:base="/blog/jekyll-change-fonts/">&lt;p&gt;Jekyll 같은 정적 웹페이지 생성기는 편하지만, 글꼴처럼 세부 설정을 건드리는 건
 편하지 않습니다.&lt;/p&gt;
 
 &lt;!--more--&gt;
+&lt;p&gt;(2020.01.11 수정. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;language-plaintext&lt;/code&gt; 쪽을 추가했습니다.)&lt;/p&gt;
+
 &lt;p&gt;첫 포스트에서 추천드린 &lt;a href=&quot;https://github.com/mmistakes/mm-github-pages-starter&quot;&gt;이 repo&lt;/a&gt;에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_sass&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_includes&lt;/code&gt;,
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_layouts&lt;/code&gt; 등 디렉토리가 없습니다. 그럼에도 불구하고 잘 작동하는 이유는
 remote에 있는 설정을 그대로 가져다가 쓰기 때문입니다.
@@ -256,6 +258,7 @@ remote에 있는 설정을 그대로 가져다가 쓰기 때문입니다.
 // &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mmistakes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minimal-mistakes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stylesheets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;#custom&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;izing&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$sans-serif&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Noto Sans KR'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$monospace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Ubuntu Mono'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$type-size-4-5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;.12em&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Ubuntu Mono is a bit small&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;@charset&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;minimal-mistakes/skins/aqua&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// skin&lt;/span&gt;
@@ -279,13 +282,26 @@ remote에 있는 설정을 그대로 가져다가 쓰기 때문입니다.
     &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;18px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// change to whatever&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.highlight&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$monospace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$type-size-4-5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.language-plaintext&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$monospace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$type-size-5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#c0ffee&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;이렇게 파일을 만들면&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;기본 글꼴이 Noto Sans KR로 변경되며,&lt;/li&gt;
   &lt;li&gt;고정폭 글꼴은 Ubuntu Mono로 설정되고&lt;/li&gt;
-  &lt;li&gt;글꼴 크기도 설정된 것처럼 작아집니다.&lt;/li&gt;
+  &lt;li&gt;글꼴 크기도 설정된 것처럼 작아지면서&lt;/li&gt;
+  &lt;li&gt;code highlight(backtick 3개/3개)의 폰트 크기도 변경되고&lt;/li&gt;
+  &lt;li&gt;inline code(backtick 1개/1개)의 폰트 크기 및 배경 색깔이 변경됩니다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;첫 번째로 나오는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$sans-serif&lt;/code&gt;는  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_variables.scss&lt;/code&gt;에서 정의되는 sans-serif 관련
@@ -303,6 +319,11 @@ remote에 있는 설정을 그대로 가져다가 쓰기 때문입니다.
 &lt;p&gt;그 이후에는 해당 issue의 해결법을 적용하였습니다 (4px씩 줄였습니다).
 Jekyll에서 컴파일 하는 과정에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@import &quot;minimal-mistakes/skins/aqua&quot;; // skin&lt;/code&gt;
 같은 줄들은 자동으로 생성됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;highlight&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;language-plaintext&lt;/code&gt; 역시 Ubuntu Mono의 기본 크기 때문에
+수정할 수밖에 없었는데, html 요소의 이름과 연관된 것 같아 설정해보았는데
+다행히 잘 작동하였습니다. 색깔을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c0ffee&lt;/code&gt;로 장난삼아 해보았는데, 기본 색깔과 잘
+어울리는 것 같아 일단 점찍어놓았습니다.&lt;/p&gt;
 
 &lt;p&gt;헤더는 다른 폰트로 설정해서 더 멋있게 할 수 있지 않을까 싶지만,
 디자인에 조예가 깊지 않고 지금 보기에도 괜찮아 일단 여기에서 멈추려 합니다.&lt;/p&gt;</content><author><name>Sangheon Lee</name></author><category term="Jekyll" /><summary type="html">Jekyll 같은 정적 웹페이지 생성기는 편하지만, 글꼴처럼 세부 설정을 건드리는 건 편하지 않습니다.</summary></entry><entry><title type="html">블로그를 시작했습니다</title><link href="/blog/hello-jekyll/" rel="alternate" type="text/html" title="블로그를 시작했습니다" /><published>2019-12-22T18:00:00+09:00</published><updated>2019-12-22T18:00:00+09:00</updated><id>/blog/hello-jekyll</id><content type="html" xml:base="/blog/hello-jekyll/">&lt;p&gt;미루고 미루던 Jekyll 블로그 공사를 진행했습니다.&lt;/p&gt;

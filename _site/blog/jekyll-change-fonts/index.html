@@ -35,6 +35,8 @@
 
 
 
+  <meta property="article:modified_time" content="2020-01-11T13:40:00+09:00">
+
 
 
 
@@ -288,7 +290,7 @@
     <meta itemprop="headline" content="Jekyll 기반 블로그 글꼴 수정하기">
     <meta itemprop="description" content="Jekyll 같은 정적 웹페이지 생성기는 편하지만, 글꼴처럼 세부 설정을 건드리는 건편하지 않습니다.">
     <meta itemprop="datePublished" content="December 22, 2019">
-    
+    <meta itemprop="dateModified" content="January 11, 2020">
 
     <div class="page__inner-wrap">
       
@@ -301,7 +303,7 @@
 
 
 
-  1 분 소요
+  2 분 소요
 
 </p>
           
@@ -314,6 +316,8 @@
 편하지 않습니다.</p>
 
 <!--more-->
+<p>(2020.01.11 수정. <code class="language-plaintext highlighter-rouge">language-plaintext</code> 쪽을 추가했습니다.)</p>
+
 <p>첫 포스트에서 추천드린 <a href="https://github.com/mmistakes/mm-github-pages-starter">이 repo</a>에는 <code class="language-plaintext highlighter-rouge">_sass</code>, <code class="language-plaintext highlighter-rouge">_includes</code>,
 <code class="language-plaintext highlighter-rouge">_layouts</code> 등 디렉토리가 없습니다. 그럼에도 불구하고 잘 작동하는 이유는
 remote에 있는 설정을 그대로 가져다가 쓰기 때문입니다.
@@ -339,6 +343,7 @@ remote에 있는 설정을 그대로 가져다가 쓰기 때문입니다.
 // </span><span class="na">https</span><span class="p">:</span><span class="o">//</span><span class="n">mmistakes</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">minimal-mistakes</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">stylesheets</span><span class="o">/</span><span class="mh">#custom</span><span class="n">izing</span>
 <span class="nv">$sans-serif</span><span class="o">:</span> <span class="s1">'Noto Sans KR'</span><span class="p">;</span>
 <span class="nv">$monospace</span><span class="p">:</span> <span class="s1">'Ubuntu Mono'</span><span class="p">;</span>
+<span class="nv">$type-size-4-5</span><span class="p">:</span> <span class="m">1</span><span class="mi">.12em</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span> <span class="c1">// Ubuntu Mono is a bit small</span>
 
 <span class="k">@charset</span> <span class="s2">"utf-8"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"minimal-mistakes/skins/aqua"</span><span class="p">;</span> <span class="c1">// skin</span>
@@ -362,13 +367,26 @@ remote에 있는 설정을 그대로 가져다가 쓰기 때문입니다.
     <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span> <span class="c1">// change to whatever</span>
   <span class="p">}</span>
 <span class="p">}</span>
+
+<span class="nc">.highlight</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="nv">$monospace</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$type-size-4-5</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.language-plaintext</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="nv">$monospace</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$type-size-5</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="mh">#c0ffee</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>이렇게 파일을 만들면</p>
 <ul>
   <li>기본 글꼴이 Noto Sans KR로 변경되며,</li>
   <li>고정폭 글꼴은 Ubuntu Mono로 설정되고</li>
-  <li>글꼴 크기도 설정된 것처럼 작아집니다.</li>
+  <li>글꼴 크기도 설정된 것처럼 작아지면서</li>
+  <li>code highlight(backtick 3개/3개)의 폰트 크기도 변경되고</li>
+  <li>inline code(backtick 1개/1개)의 폰트 크기 및 배경 색깔이 변경됩니다.</li>
 </ul>
 
 <p>첫 번째로 나오는 <code class="language-plaintext highlighter-rouge">$sans-serif</code>는  <code class="language-plaintext highlighter-rouge">_variables.scss</code>에서 정의되는 sans-serif 관련
@@ -386,6 +404,11 @@ remote에 있는 설정을 그대로 가져다가 쓰기 때문입니다.
 <p>그 이후에는 해당 issue의 해결법을 적용하였습니다 (4px씩 줄였습니다).
 Jekyll에서 컴파일 하는 과정에서 <code class="language-plaintext highlighter-rouge">@import "minimal-mistakes/skins/aqua"; // skin</code>
 같은 줄들은 자동으로 생성됩니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">highlight</code>와 <code class="language-plaintext highlighter-rouge">language-plaintext</code> 역시 Ubuntu Mono의 기본 크기 때문에
+수정할 수밖에 없었는데, html 요소의 이름과 연관된 것 같아 설정해보았는데
+다행히 잘 작동하였습니다. 색깔을 <code class="language-plaintext highlighter-rouge">c0ffee</code>로 장난삼아 해보았는데, 기본 색깔과 잘
+어울리는 것 같아 일단 점찍어놓았습니다.</p>
 
 <p>헤더는 다른 폰트로 설정해서 더 멋있게 할 수 있지 않을까 싶지만,
 디자인에 조예가 깊지 않고 지금 보기에도 괜찮아 일단 여기에서 멈추려 합니다.</p>
@@ -438,7 +461,7 @@ Jekyll에서 컴파일 하는 과정에서 <code class="language-plaintext highl
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2019-12-22T20:00:00+09:00">December 22, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-01-11">January 11, 2020</time></p>
         
       </footer>
 
