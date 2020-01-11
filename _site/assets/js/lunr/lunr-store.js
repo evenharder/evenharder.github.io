@@ -23,4 +23,9 @@ var store = [{
         "excerpt":"헷갈리던 Persistent Segment Tree를 드디어 이해했습니다. Persistent Segment Tree란, 크기 $N$의 segment tree가 총 $M$번 상태 변화가 일어날 때, 이를 공간 복잡도 $O(N + M \\lg N)$에 저장하는 자료구조입니다. 대표적인 예시로 2차원 격자에서, 점 갱신이 일어나지 않을 때 $x_1 \\leq x \\leq x_2$이면서 $y_1 \\leq y \\leq y_2$를 만족하는 점의...","categories": ["algo"],
         "tags": ["PS","Data Structure"],
         "url": "/algo/persistent-segment-tree-xor-query/",
+        "teaser":null},{
+        "title": "2020년 1월 초반 Problem Solving",
+        "excerpt":"연말연초라 문제 풀이를 많이 하지는 못했습니다. HLD 정도만 제대로 다시 짜보고, 수학 문제들 위주로 풀어보았습니다. TOPC 2015 E. Egg 문제 링크 : BOJ 11012 대표적인 persistent segment tree 사용 문제이고, 이전에 썼던 포스팅과 비교해가며 코딩해보았는데 좌표 압축 과정에서 황당한 실수를 며칠간 발견 못 해 고생했었습니다. BOJ 1040 정수 문제 링크...","categories": ["algo"],
+        "tags": ["PS"],
+        "url": "/algo/recent-ps-2020-01-0x/",
         "teaser":null}]

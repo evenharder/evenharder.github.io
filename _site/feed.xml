@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-01-11T13:50:03+09:00</updated><id>/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">Persistent Segment Tree w/ BOJ 13538</title><link href="/algo/persistent-segment-tree-xor-query/" rel="alternate" type="text/html" title="Persistent Segment Tree w/ BOJ 13538" /><published>2019-12-29T19:30:00+09:00</published><updated>2019-12-29T19:30:00+09:00</updated><id>/algo/persistent-segment-tree-xor-query</id><content type="html" xml:base="/algo/persistent-segment-tree-xor-query/">&lt;p&gt;헷갈리던 Persistent Segment Tree를 드디어 이해했습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-01-11T13:52:25+09:00</updated><id>/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">2020년 1월 초반 Problem Solving</title><link href="/algo/recent-ps-2020-01-0x/" rel="alternate" type="text/html" title="2020년 1월 초반 Problem Solving" /><published>2020-01-10T23:00:00+09:00</published><updated>2020-01-10T23:00:00+09:00</updated><id>/algo/recent-ps-2020-01-0x</id><content type="html" xml:base="/algo/recent-ps-2020-01-0x/">&lt;p&gt;연말연초라 문제 풀이를 많이 하지는 못했습니다. HLD 정도만 제대로 다시 짜보고, 수학 문제들 위주로 풀어보았습니다.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1 id=&quot;topc-2015-e-egg&quot;&gt;TOPC 2015 E. Egg&lt;/h1&gt;
+
+&lt;p&gt;문제 링크 : &lt;a href=&quot;https://www.acmicpc.net/problem/11012&quot;&gt;BOJ 11012&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;대표적인 persistent segment tree 사용 문제이고, 이전에 썼던 포스팅과 비교해가며 코딩해보았는데 좌표 압축 과정에서 황당한 실수를 며칠간 발견 못 해 고생했었습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;boj-1040-정수&quot;&gt;BOJ 1040 정수&lt;/h1&gt;
+
+&lt;p&gt;문제 링크 : &lt;a href=&quot;https://www.acmicpc.net/problem/1040&quot;&gt;BOJ 1040&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;찾아보니 반복문을 통해 수를 적절히 올려가며 되는지 안 되는지 판단하는 효율적인 전체 탐색도 있었는데, 잘 모르겠어서 그냥 동적 계획법으로 해결하였습니다.&lt;/p&gt;
+
+&lt;p&gt;10개의 수 중 $K$개의 수를 사용하므로, $\binom{10}{K}$의 모든 조합에 대해 동적 계획법을 적용할 것입니다.&lt;/p&gt;
+
+&lt;p&gt;상태는 다음 4가지를 요소로 구성됩니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;0의 경우, 지금 0이 와도 되는지 유무 (leading zero 관련)&lt;/li&gt;
+  &lt;li&gt;남은 자리수를 배치할 때, 입력으로 주어진 수 이상으로 배치해야하는지의 유무&lt;/li&gt;
+  &lt;li&gt;현재 보고 있는 자릿수의 위치&lt;/li&gt;
+  &lt;li&gt;$k$개의 수 사용 유무를 의미하는 비트들&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이렇게 구성하면, 상태 전이는 반복문을 이용해 다음 자리로 넘어가는 방식으로 구성할 수 있습니다. 말로 설명하기가 어렵네요. &lt;a href=&quot;http://boj.kr/5b9f3fa4e74e40ae9aef087666455c8c&quot;&gt;코드&lt;/a&gt;를 보시는 게 이해가 빠를 것 같습니다. 시간 복잡도는 $O(\binom{10}{k} 2^k k)$인데 상태 표현 때문에 이런 저런 상수가 좀 크게 붙습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;boj-17429-국제-메시-기구&quot;&gt;BOJ 17429 국제 메시 기구&lt;/h1&gt;
+
+&lt;p&gt;문제 링크 : &lt;a href=&quot;https://www.acmicpc.net/problem/17429&quot;&gt;BOJ 17429&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;기본적으로 HLD + segtree라 크게 코멘트할 부분은 없는 문제입니다. 나중에 다른 포스팅으로 설명하도록 하겠습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;boj-1078-뒤집음&quot;&gt;BOJ 1078 뒤집음&lt;/h1&gt;
+
+&lt;p&gt;문제 링크 : &lt;a href=&quot;https://www.acmicpc.net/problem/1078&quot;&gt;BOJ 1078&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;어떤 수 $D$가 주어질 때, $x$에서 $x$를 뒤집은 수를 뺀 수가 $D$가 되는 최소의 양의 정수 $x$를 찾는 문제입니다.&lt;/p&gt;
+
+&lt;p&gt;우선 $x$에서 $x$를 뒤집은 수를 뺀 수는 9의 배수임을 알 수 있습니다. 때문에 9의 배수가 아니면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code&gt;을 출력하면 됩니다. 그리고 9의 배수이면서 10의 배수가 아닌 $x$에 대해 답이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;D&lt;/code&gt;일 때, $10x$의 답은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1D1&lt;/code&gt;이 됨을 관찰할 수 있습니다. 가장 큰 자릿수의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;와 가장 작은 자릿수의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;을 제외하고, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;D&lt;/code&gt;가 10배 된 자리에 위치했기 때문입니다. $100x$는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;10D01&lt;/code&gt;, $1000x$는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;100D001&lt;/code&gt;…로 진행됨을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;그 다음부터가 문제입니다. $D$가 $10^6$ 이상인 $x$들이 있기 때문입니다. 전수조사를 100만 단위로 조금 해본 결과, 맨 앞자리가 1일 때만 유효한 $D$들이 있었습니다. 이를 맨 앞의 1의 위치를 옮겨가면서 반복해보았고, $10^9$까지 유효한 $D$들이 있었습니다. $10^{10}$ 이상일 땐 나타나지 않았는데, 반전을 통해서 영향을 받는 자리수가 너무 커져서라고 생각했습니다. 결과적으로 500만개의 수만 살펴보면서 정답을 확인할 수 있었습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;제3회-kriiicon-ㅍ번-피보나미얼&quot;&gt;제3회 kriiicon ㅍ번 피보나미얼&lt;/h1&gt;
+
+&lt;p&gt;문제 링크 : &lt;a href=&quot;https://www.acmicpc.net/problem/11397&quot;&gt;BOJ 11397&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;피사노 주기와 관련된 문제로, 별도로 포스팅을 하도록 하겠습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;gcj-2008-round-1a-c2-numbers&quot;&gt;GCJ 2008 Round 1A C2 Numbers&lt;/h1&gt;
+
+&lt;p&gt;문제 링크 : &lt;a href=&quot;https://www.acmicpc.net/problem/12925&quot;&gt;BOJ 12925&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;선형 점화식과 관련된 유명한 트릭을 사용해야 합니다. $X_n = \alpha^n + \beta^n$이라 정의할 때,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;X_{n+2} = (\alpha + \beta) X_{n+1} - \alpha\beta X_n&lt;/script&gt;
+
+&lt;p&gt;이 성립합니다. 식을 전개하면 그대로 나옵니다.&lt;/p&gt;
+
+&lt;p&gt;때문에 이차방정식의 근과 계수와의 관계처럼, $\alpha = 3 + \sqrt{5}$, $\beta = 3 - \sqrt{5}$로 잡아봅시다. 그러면&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;X_{n+2} = 6 X_{n+1} - 4 X_n&lt;/script&gt;
+
+&lt;p&gt;의 식이 유도됩니다. 이 때, $n$이 양의 정수이면 $0 &amp;lt; \beta^n &amp;lt; 1$임을 알 수 있습니다. 그러므로 $X_n$의 마지막 3자리(즉$\mod 1000$)를 알 수 있으면, $\alpha^n$의 마지막 3자리를 알 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;위 점화식을 통해 $X_{n}$을 알아내는 대표적인 방법은 행렬곱이지만, 저는 $X_n$의 본래 정의에 입각하여&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;X_{2n} = X_n^2 - 2 \times (\alpha\beta)^n, ~~ X_{2n+1} = X_nX_{n+1} - (\alpha+\beta)(\alpha\beta)^n&lt;/script&gt;
+
+&lt;p&gt;를 이끌어내어 재귀적으로 계산하였습니다. 이 과정에서 조사하게 되는 $X_i$의 개수는 $O(\lg n)$개 정도이므로, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;std::map&lt;/code&gt; 같은 map 형태의 자료구조를 이용하여 memoization을 통해 계산할 수도 있습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;boj-11691-lcmi-j&quot;&gt;BOJ 11691 LCM(i, j)&lt;/h1&gt;
+
+&lt;p&gt;문제 링크 : &lt;a href=&quot;https://www.acmicpc.net/problem/11691&quot;&gt;BOJ 11691&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;$\sum_{i}^{n}\sum_{j,\ i &amp;lt; j}^{n} \text{lcm}(i, j)$을 구하는 문제입니다. 뫼비우스 반전 공식 등을 이용하여 조금 더 나은 시간 복잡도를 보이는 풀이도 있는 것 같으나 여기서는 약간 일반화된 풀이를 소개하도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;$\text{lcm}(a, b) = ab / \gcd(a, b)$이므로, $\gcd$를 잘 처리할 수 있는 방법을 생각해보아야 합니다. 여기서 특수한 수열 $w_i$를 정의하도록 하겠습니다. 수열 ${w_i}$는 다음을 만족합니다.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sum_{d | k} w_d = \frac{1}{k}&lt;/script&gt;
+
+&lt;p&gt;에라토스테네스의 체를 구하는 것처럼, $w_1$부터 $w_n$까지 $O(n \lg n \lg \lg n)$에 구할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;그 다음 계산하고자 하는 값은 $\sum_{i}^{n}\sum_{j}^{n} \text{lcm}(i, j)$입니다. $i = j$일 때만 제외하고 2로 나누면 구하고자 하는 값이 나옴을 알 수 있습니다. 여기서 식을 조금 변형해보겠습니다.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+\sum_{i}^{n}\sum_{j}^{n} \text{lcm}(i, j) &amp;= \sum_{i}^{n}\sum_{j}^{n} \frac{ij}{\gcd(i, j)} \\
+&amp;= \sum_{i}^{n}\sum_{j}^{n}\left( ij\sum_{d|\gcd(i, j)} w_d\right)\\
+&amp;= \sum_{d}^n\sum_{d|i}^n\sum_{d|j}^n ij w_d\\
+&amp;= \sum_{d}^n w_d \sum_{d|i}^n\sum_{d|j}^n ij\\
+&amp;= \sum_{d}^n w_d (\sum_{d|i}^n)^2
+\end{align*} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;위와 같이 변형하면, 1부터 $n$까지 중 $d$의 배수들의 합을 통해 위 식을 계산할 수 있고, 거기에서 제곱합을 빼서 원래 구하고자 했던 값을 계산할 수 있습니다. 수가 연속되어 있으므로 합공식을 이용하여 총 $O(n)$에 간단히 전처리할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;주어진 수가 연속된 자연수가 아니라 수열일 때도 비슷하게 해결할 수 있습니다. 해당 문제는 &lt;a href=&quot;https://atcoder.jp/contests/agc038/tasks/agc038_c&quot;&gt;AGC 038 C번 LCMs&lt;/a&gt;로 출제된 바 있습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;제3회-kriiicon-ㅆ번-씽크스몰&quot;&gt;제3회 kriiicon ㅆ번 씽크스몰&lt;/h1&gt;
+
+&lt;p&gt;문제 링크 : &lt;a href=&quot;https://www.acmicpc.net/problem/11385&quot;&gt;BOJ 11385&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;이 문제가 나올 당시였던 2015년 중순이라면 몰라도 이제 FFT와 NTT는 well-known topic이 되어 버렸습니다. 차수가 최대 $10^6$이므로, PS에서 주로 쓰이는 Cooley-Tukey FFT algorithm을 사용하려면 최대 크기 $2^{21}$의 배열을 다루어야 합니다.&lt;/p&gt;
+
+&lt;p&gt;일반적으로 FFT는 NTT보다 빠르지만, 이 문제는 FFT 실수 오차가 상당히 빡세다고 합니다. 그걸 모르고 NTT로 짜보았는데, 순환군의 크기가 $2^{21}$ 이상이면서 곱하면 $10^{18} + 10^{12}$를 근소하게 넘고, $2^{63}-1$보다 작으며, 각각의 크기는 $2^{31}-1$보다 작은 NTT-friendly 소수 2개가 다행히 팀노트에 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$998244353 = 119 \times 2^{23} + 1$. 원시근: $3$.&lt;/li&gt;
+  &lt;li&gt;$1012924417 = 483 \times 2^{21} + 1$. 원시근: $5$.&lt;/li&gt;
+  &lt;li&gt;이 둘의 곱은 $10^{18} + 10^{12}$보다 조금 더 큽니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;그래서 이 값을 구하고, 중국인의 나머지 정리까지 갈 것도 없이 연립합동방정식을 세워 원래 값을 복원해낼 수 있습니다. 10초 제한에 9초나 걸렸습니다. NTT가 여러모로 느리다는 걸 다시 깨달았습니다.&lt;/p&gt;</content><author><name>Sangheon Lee</name></author><category term="PS" /><summary type="html">연말연초라 문제 풀이를 많이 하지는 못했습니다. HLD 정도만 제대로 다시 짜보고, 수학 문제들 위주로 풀어보았습니다.</summary></entry><entry><title type="html">Persistent Segment Tree w/ BOJ 13538</title><link href="/algo/persistent-segment-tree-xor-query/" rel="alternate" type="text/html" title="Persistent Segment Tree w/ BOJ 13538" /><published>2019-12-29T19:30:00+09:00</published><updated>2019-12-29T19:30:00+09:00</updated><id>/algo/persistent-segment-tree-xor-query</id><content type="html" xml:base="/algo/persistent-segment-tree-xor-query/">&lt;p&gt;헷갈리던 Persistent Segment Tree를 드디어 이해했습니다.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
