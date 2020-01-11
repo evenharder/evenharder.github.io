@@ -6,6 +6,7 @@ categories:
 tags:
   - PS
   - Data Structure
+toc: true
 excerpt_separator: <!--more-->
 ---
 
@@ -179,7 +180,7 @@ int pst_kth(node* s, node* e, int k, int lv=18){
 
 이 함수로 5번 쿼리를 해결할 수 있습니다.
 
-## `main` 함수
+# `main` 함수
 
 나머지 3번 쿼리는`main` 함수에서 카운터를 감소하는 걸로 처리할 수 있고, 이제 쿼리만 호출하면 됩니다.
 
