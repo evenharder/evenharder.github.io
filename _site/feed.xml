@@ -1,4 +1,138 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-01-11T13:52:25+09:00</updated><id>/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">2020년 1월 초반 Problem Solving</title><link href="/algo/recent-ps-2020-01-0x/" rel="alternate" type="text/html" title="2020년 1월 초반 Problem Solving" /><published>2020-01-10T23:00:00+09:00</published><updated>2020-01-10T23:00:00+09:00</updated><id>/algo/recent-ps-2020-01-0x</id><content type="html" xml:base="/algo/recent-ps-2020-01-0x/">&lt;p&gt;연말연초라 문제 풀이를 많이 하지는 못했습니다. HLD 정도만 제대로 다시 짜보고, 수학 문제들 위주로 풀어보았습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-01-13T20:48:23+09:00</updated><id>/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">2020년 1월 12일 Problem Solving</title><link href="/algo/daily-ps-2020-0112/" rel="alternate" type="text/html" title="2020년 1월 12일 Problem Solving" /><published>2020-01-13T19:30:00+09:00</published><updated>2020-01-13T19:30:00+09:00</updated><id>/algo/daily-ps-2020-0112</id><content type="html" xml:base="/algo/daily-ps-2020-0112/">&lt;p&gt;문제를 조금 풀고 CF 613을 버추얼로 해보았습니다.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1 id=&quot;boj-1376-민식우선탐색&quot;&gt;BOJ 1376 민식우선탐색&lt;/h1&gt;
+
+&lt;p&gt;링크 : &lt;a href=&quot;https://www.acmicpc.net/problem/1376&quot;&gt;BOJ 1376&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;특이한 순서로 DFS를 돌아야 합니다. 한 정점에서 방문할 수 있는 정점의 개수가 홀수면 중앙값의 정점 번호로, 짝수면 최소 정점 번호로 순회해야 합니다. 정점은 최대 $10^5$개지만 간선이 최대 $10^6$개입니다.&lt;/p&gt;
+
+&lt;p&gt;동적으로 변하는 자료의 중앙값을 구하는 대표적인 방법은 세그먼트 트리 / 펜윅 트리로 k번째 원소를 구하는 함수를 작성하거나, 우선순위 큐 / 이진 탐색 트리 2개를 관리하여 가운데를 잘 나누는 것입니다. 저는 후자로 접근하여 편하게 이진 탐색 트리 기반인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;std::set&lt;/code&gt;으로 짜보았는데 시간 초과가 났고, 로컬에서도 5초 정도로 꽤 오래 걸렸습니다. 중앙 쪽 삽입 및 삭제가 빈번히 되기 때문인 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;각 정점마다 인접한 정점 번호를 담는 컨테이너가 2개 ($C_1$, $C_2$) 있다고 하고, $C_2$의 원소가 $C_1$의 원소보다 크다고 합시다. 원소에 직접적으로 접근할 때는 $C_1$의 최솟값, $C_2$의 최솟값, $C_1$의 최댓값 정도밖에 없습니다. 원소의 삭제 때문에 임의의 원소에 접근 가능하지 않으면 어려워보일 수 있지만, lazy하게 그때그때 원소를 제거해나갈 수 있다면 상관이 없습니다.&lt;/p&gt;
+
+&lt;p&gt;때문에 front/back의 pop이 자유로운 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;std::list&lt;/code&gt;로 구현했습니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;std::deque&lt;/code&gt;은 메모리를 &lt;strong&gt;상당히&lt;/strong&gt; 많이 잡아먹습니다. 이에 대한 자세한 설명은 제가 삼성 소프트웨어 멤버십에 쓴 &lt;a href=&quot;http://www.secmem.org/blog/2019/11/14/c++-container-memory-usage/&quot;&gt;이 포스트&lt;/a&gt;에 나와 있습니다. 간단히 설명하면, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;std::deque&lt;/code&gt; 하나당 기본적으로 (거의) 512바이트 단위로 청크를 조직하고 재할당도 일어나기 때문에 메모리 측면에서 비효율적입니다.&lt;/p&gt;
+
+&lt;p&gt;원소 삽입은 정렬을 미리 한 다음 반으로 나누어 넣었으며, 컨테이너의 크기와 ‘컨테이너에는 있지만 이미 사용된 정점의 개수’를 관리하였습니다. 원소가 총 홀수 개 있을 때 $C_2$의 맨 앞 원소가 중앙값이 되도록 조절하였습니다.&lt;/p&gt;
+
+&lt;p&gt;이 부분만 조금 더 자세히 설명해보겠습니다. 우리가 원하는 원소의 분포는 다음과 같습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$(0, 1)$, $(1, 1)$, $(1, 2)$, $(2, 2)$, $\cdots$, $(\lfloor n/2 \rfloor, \lfloor (n+1)/2 \rfloor)$ 등등&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이 원소들은 기본적으로 ‘유효한’ 원소여야 합니다. 때문에 각 컨테이너에 속하지만 유효하지 않은 원소의 개수를 $x_1$, $x_2$라 하면&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\lvert C_1 \rvert - x_1 \leq \lvert C_2 \rvert - x_2 &lt; \lvert C_1 \rvert - x_1 + 1 %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;이 성립해야 합니다. 때문에 while문을 체크하면서 원소들을 옮겨주면 됩니다. 이 과정에서 유효하지 않은 원소가 뽑히면 제거합니다. 재미있게도 원소를 컨테이너에서 제거하는 과정은 $\lvert C_i \rvert - x_i$ 값에 영향을 주지 않습니다. 둘 다 1 감소하기 때문입니다. 그렇기에 저는 양쪽의 $\lvert C_i \rvert - x_i$의 균형을 맞춘 후, 양 끝의 유효하지 않은 원소를 제거하였습니다. 어떤 원소가 유효하지 않은 상태인지는 배열 하나만 있으면 충분합니다.&lt;/p&gt;
+
+&lt;p&gt;여기까지 하면 각 상태에서 어느 정점으로 가야 할지는 쉽게 계산할 수 있습니다. 원소 개수가 짝수면 $C_1$의, 홀수면 $C_2$의 첫 원소를 선택하면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;원소들이 한 번 들어오고 한 번 빠질 뿐더러, 다음 원소를 고르며 균형을 깨뜨리는 과정의 복원이 금방 될 수 있다고 판단하였기에 시간 복잡도는 정렬 $O(n \lg n)$에 $O(n+m)$이라고 생각합니다. 그런 것 치고는 상당히 퍼포먼스가 600ms 대로 느리긴 했습니다, cache hit가 잘 일어나지 않아서라고 생각합니다. 아니면 제 알고리즘이 비효율적일지도 모릅니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;codeforces-round-613-div-2-virtual&quot;&gt;Codeforces Round #613 (Div. 2) Virtual&lt;/h1&gt;
+
+&lt;p&gt;정말 오랜만에 돌아보는 코포 라운드 virtual입니다. 셋은 무난하게 좋았습니다. 본 대회 때 스코어보드를 보기만 했는데 유달리 거의 모든 문제에서 정답률이 낮아서 불안불안했습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;a--mezo-playing-zoma-001&quot;&gt;A : Mezo Playing Zoma (0:01)&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;L&lt;/code&gt; 하나로 1만큼 감소할 수 있고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt; 하나로 1만큼 증가할 수 있으니 답은 $n+1$입니다. Div2A 치고 깔끔하고 좋다고 생각합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1285/submission/68638644&quot;&gt;코드 링크&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;b--just-eat-it-010&quot;&gt;B : Just Eat It! (0:10)&lt;/h2&gt;
+
+&lt;p&gt;말릴 뻔했습니다. 정해는 prefix나 suffix 중 합이 0 이상인 게 있으면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NO&lt;/code&gt;, 아니면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YES&lt;/code&gt;입니다. 저는 약간 헷갈려서 prefix sum을 multiset에 넣고 맨 마지막에서만 예외처리를 했습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1285/submission/68639052&quot;&gt;코드 링크&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;c-fadi-and-lcm-020-1&quot;&gt;C. Fadi and LCM (0:20, +1)&lt;/h2&gt;
+
+&lt;p&gt;문제를 잘못 이해하고 냈다가 예제랑 안 맞는 것도 제대로 확인 안하고 한 번 틀렸습니다. $k \geq 1$일 때 $LCM(a, b) \leq LCM(a, kb)$이므로 곱이 $X$가 되야 한다는 결론에 도달할 수 있고, 소수의 거듭제곱꼴을 고려하면 같은 소인수는 한 번에 몰아주어야 한다는 아이디어를 떠올릴 수 있습니다. 가장 작은 소인수 11개의 곱이 $2 \times 10^{11}$보다 살짝 크므로, 소인수분해를 한 다음에 완전탐색으로 최대를 최소하하면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1285/submission/68639696&quot;&gt;코드 링크&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;d-dr-evil-underscores-028&quot;&gt;D. Dr. Evil Underscores (0:28)&lt;/h2&gt;
+
+&lt;p&gt;XOR이 나와서 처음에는 겁을 먹었으나 최상위 비트부터 접근해보니 상당히 쉽게 풀렸습니다. 최상위 비트부터 지금 보고 있는 모든 수의 해당 비트가 같으면 $X$의 해당 비트를 똑같이 설정하고 다음 비트로 내려가면 됩니다. 두 비트가 모두 등장하면, 두 경우 모두 하위 비트로 내려간 다음에 최솟값을 택하면 됩니다. 어느 쪽이든 $2^k$는 더해야 합니다.&lt;/p&gt;
+
+&lt;p&gt;모범 코드는 정렬을 이용했는데, 저는 Trie 위에서 트리 DP 하듯이 조사했습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1285/submission/68640107&quot;&gt;코드 링크&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;e-delete-a-segment-130&quot;&gt;E. Delete a Segment (1:30)&lt;/h2&gt;
+
+&lt;p&gt;너무 말리지 않았나 싶습니다. disjoint set이 필요한지 아닌지도 불확실했고, segment tree로 나뉜 구간의 개수를 어떻게 구해야하지도 잘 구체화가 안 되었었습니다. 잘 생각해보니 1로만 이루어진 구간에 완전히 걸치는 횟수가 중요할 것 같아서 어떻게 잘 세긴 했습니다. 그러나 자기 자신이 1로만 이루어진 구간일 때 처리가 조금 골치가 아팠습니다. 해당 경우에 대한 반례도 간단히 나와서 조금 더 생각해본 다음에 양 구간의 끝만 확인하는 식으로 했는데, 한 번에 맞아서 정말 다행이었습니다. 2250점 문제 치고는 어렵다고 생각합니다.&lt;/p&gt;
+
+&lt;p&gt;세그먼트 트리를 이용해 힘겹게 풀 수도 있지만, 간결한 라인 스위핑 풀이가 있어 소개합니다. 결국 우리가 구하고자 하는 값은 “기존 컴포넌트 수” + “$i$번째 구간을 제거할 때 증가하는 컴포넌트의 수”의 최댓값입니다.&lt;/p&gt;
+
+&lt;p&gt;구간을 event로 보아 추가는 $(l_i, -i)$, 제거는 $(r_i, i)$로 해석하여 정렬을 해봅시다. 구간 $P$ 입장에서 세그먼트 $Q$를 제거해서 컴포넌트의 수가 증가하는 경우는 다음을 만족해야 합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$P$는 $Q$에 포함되어야 합니다.&lt;/li&gt;
+  &lt;li&gt;$P$를 추가할 때, 현재 존재하는 구간은 $Q$뿐이어야 합니다.
+    &lt;ul&gt;
+      &lt;li&gt;다른 구간이 존재한다면 $P$를 제거해도 컴포넌트의 수는 그대로입니다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;$P$보다 앞에 있으면서 $Q$와 겹치는 구간 $R$이 존재해야 합니다.
+    &lt;ul&gt;
+      &lt;li&gt;$Q$는 $P$와 $R$의 연결을 제거하는 역할이기 때문입니다.&lt;/li&gt;
+      &lt;li&gt;예를 들어 $[1, 4]$, $[2, 3]$은 앞의 두 조건을 만족하지만, $[1, 4]$를 제거한다고 하여 컴포넌트의 수가 증가하진 않습니다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;위 조건은 의외로 코딩하기가 간단합니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;std::set&lt;/code&gt; 등에 id를 저장하며 현재 보고 있는 구간을 관리하면 됩니다. 때문에 이런 $(P, Q)$를 발견하면, $Q$쪽의 기여도를 하나 증가하는 식으로 구현하면 됩니다. 이 과정에서 초기 상태의 컴포넌트의 수도 셀 수 있습니다. 여기까지만 하면 기여도를 확인하면서 정답을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1285/submission/68643375&quot;&gt;대회 코드 링크&lt;/a&gt;
+&lt;a href=&quot;https://codeforces.com/contest/1285/submission/68697439&quot;&gt;업솔빙 코드 링크&lt;/a&gt; 
+(지금 보니 주석에 문법 실수가 있네요 ㅠㅠ)&lt;/p&gt;
+
+&lt;h2 id=&quot;f-classical&quot;&gt;F. Classical?&lt;/h2&gt;
+
+&lt;p&gt;문제는 한 줄에 설명할 수 있는 수준입니다. $1 \leq i &amp;lt; j \leq n \leq 10^5$ 이고 $1 \leq a_k \leq 10^5$일 때 $\max(LCM(a_i, a_j))$을 구하면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;스코어보드부터 무시무시한 수준이라 풀 수 없을 거라고 생각했고 버추얼 때는 금방 단념했습니다. 풀이를 보니 좀 새로웠습니다. 여기서는 &lt;a href=&quot;https://codeforces.com/blog/entry/72950?#comment-572483&quot;&gt;개량된 정해&lt;/a&gt;를 서술하고자 합니다.&lt;/p&gt;
+
+&lt;p&gt;우선 입력으로 들어오는 수들의 모든 약수를 배열에 추가한 다음에, 여기에서 2개의 서로소인 수들을 잘 고르자는 것이 취지입니다. 어차피 $LCM(a, b) = \frac{ab}{\gcd(a, b)}$이기 때문입니다.&lt;/p&gt;
+
+&lt;p&gt;곱을 최대화해야 하니 큰 수부터 보는 건 맞는 것 같은데, 여기서 신기한 방법을 씁니다. 내림차순으로 순서대로 스택에 넣는데, 새로 넣을 수 $x$와 서로소인 수가 없을 때까지 스택에서 수를 빼내고, 빼내면서 $x$와 빼는 수의 곱의 최댓값을 답과 비교하여 최대를 취합니다.&lt;/p&gt;
+
+&lt;p&gt;이 과정이 맞는 이유는 (아주 엄밀하진 않지만) 다음과 같습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$x$와 서로소인 수 $y$가 스택에 있으면 현재 $y$ 입장에서는 $xy$가 곱의 최댓값입니다. 왜냐하면
+    &lt;ul&gt;
+      &lt;li&gt;$y$ 보다 스택에 뒤에 있는 수들과는 서로소가 아니며&lt;/li&gt;
+      &lt;li&gt;스택에 들어오는 수는 내림차순이므로 감소하기 때문입니다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;이 과정에서는 $x$와 서로소가 아닌 수 $y$와도 곱을 계산하여 갱신하지만, 그래도 됩니다. 마지막으로 빼는 수는 $x$와 서로소이면서 가장 크기 때문입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;$x$와 서로소인 수가 스택에 있는지는 뫼비우스 함수 등을 써서 포함 배제를 사용하면 됩니다. $cnt_i$를 스택에 있는 수들 중 $i$의 배수의 개수라 하면, 넣고 뺄 때는 $d\,\vert\,x$인 모든 $d$에 대해 값을 바꾸면 되며, $x$와 서로소인 수(즉 최대공약수가 1인 수)의 개수는&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sum_{d\,\vert\,x} \mu(d) \cdot cnt_d&lt;/script&gt;
+
+&lt;p&gt;로 계산할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;뫼비우스 함수를 간단하게 계산할 수 있는 코드도 알아갈 수 있었습니다.
+위에도 링크된 댓글의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mango_lassi&lt;/code&gt;님 코드에서 영향을 많이 받았습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// mu : Möbius, dv : divisor&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MAXN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MAXN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1285/submission/68701006&quot;&gt;코드 링크&lt;/a&gt;&lt;/p&gt;</content><author><name>Sangheon Lee</name></author><category term="PS" /><category term="Codeforces" /><summary type="html">문제를 조금 풀고 CF 613을 버추얼로 해보았습니다.</summary></entry><entry><title type="html">2020년 1월 초반 Problem Solving</title><link href="/algo/recent-ps-2020-01-0x/" rel="alternate" type="text/html" title="2020년 1월 초반 Problem Solving" /><published>2020-01-10T23:00:00+09:00</published><updated>2020-01-10T23:00:00+09:00</updated><id>/algo/recent-ps-2020-01-0x</id><content type="html" xml:base="/algo/recent-ps-2020-01-0x/">&lt;p&gt;연말연초라 문제 풀이를 많이 하지는 못했습니다. HLD 정도만 제대로 다시 짜보고, 수학 문제들 위주로 풀어보았습니다.&lt;/p&gt;
 
 &lt;!--more--&gt;
 

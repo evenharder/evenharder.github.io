@@ -28,4 +28,9 @@ var store = [{
         "excerpt":"연말연초라 문제 풀이를 많이 하지는 못했습니다. HLD 정도만 제대로 다시 짜보고, 수학 문제들 위주로 풀어보았습니다. TOPC 2015 E. Egg 문제 링크 : BOJ 11012 대표적인 persistent segment tree 사용 문제이고, 이전에 썼던 포스팅과 비교해가며 코딩해보았는데 좌표 압축 과정에서 황당한 실수를 며칠간 발견 못 해 고생했었습니다. BOJ 1040 정수 문제 링크...","categories": ["algo"],
         "tags": ["PS"],
         "url": "/algo/recent-ps-2020-01-0x/",
+        "teaser":null},{
+        "title": "2020년 1월 12일 Problem Solving",
+        "excerpt":"문제를 조금 풀고 CF 613을 버추얼로 해보았습니다. BOJ 1376 민식우선탐색 링크 : BOJ 1376 특이한 순서로 DFS를 돌아야 합니다. 한 정점에서 방문할 수 있는 정점의 개수가 홀수면 중앙값의 정점 번호로, 짝수면 최소 정점 번호로 순회해야 합니다. 정점은 최대 $10^5$개지만 간선이 최대 $10^6$개입니다. 동적으로 변하는 자료의 중앙값을 구하는 대표적인 방법은 세그먼트...","categories": ["algo"],
+        "tags": ["PS","Codeforces"],
+        "url": "/algo/daily-ps-2020-0112/",
         "teaser":null}]
