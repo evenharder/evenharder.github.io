@@ -33,4 +33,9 @@ var store = [{
         "excerpt":"문제를 조금 풀고 CF 613을 버추얼로 해보았습니다. BOJ 1376 민식우선탐색 링크 : BOJ 1376 특이한 순서로 DFS를 돌아야 합니다. 한 정점에서 방문할 수 있는 정점의 개수가 홀수면 중앙값의 정점 번호로, 짝수면 최소 정점 번호로 순회해야 합니다. 정점은 최대 $10^5$개지만 간선이 최대 $10^6$개입니다. 동적으로 변하는 자료의 중앙값을 구하는 대표적인 방법은 세그먼트...","categories": ["algo"],
         "tags": ["PS","Codeforces"],
         "url": "/algo/daily-ps-2020-0112/",
+        "teaser":null},{
+        "title": "2020년 1월 중순 Problem Solving",
+        "excerpt":"풀고 싶은 문제만 쌓여가고 있습니다. 다양한 문제 풀이 BOJ 8339 Fibonacci Machine 문제 링크 lazy propgation을 통한 세그먼트 트리로 풀 수 있습니다. 구간 $[a, b]$에 대해 현재 합을 $F_{i_a} + F_{i_{a+1}} + \\cdots + F_{i_b}$로, 이전 합을 $F_{i_a - 1} + F_{i_{a+1} - 1} + \\cdots + F_{i_b - 1}$로...","categories": ["algo"],
+        "tags": ["PS"],
+        "url": "/algo/recent-ps-2020-01-1x/",
         "teaser":null}]
