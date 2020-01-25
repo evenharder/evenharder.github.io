@@ -38,4 +38,9 @@ var store = [{
         "excerpt":"풀고 싶은 문제만 쌓여가고 있습니다. 다양한 문제 풀이 BOJ 8339 Fibonacci Machine 문제 링크 lazy propgation을 통한 세그먼트 트리로 풀 수 있습니다. 구간 $[a, b]$에 대해 현재 합을 $F_{i_a} + F_{i_{a+1}} + \\cdots + F_{i_b}$로, 이전 합을 $F_{i_a - 1} + F_{i_{a+1} - 1} + \\cdots + F_{i_b - 1}$로...","categories": ["algo"],
         "tags": ["PS"],
         "url": "/algo/recent-ps-2020-01-1x/",
+        "teaser":null},{
+        "title": "USACO 2020 January Contest",
+        "excerpt":"USACO Platinum을 오랜만에 쳐보았습니다.     대회를 다른 거 하면서 겸사겸사 치룬 와중에 1번 문제는 금방 풀려서 좋았습니다. 그러나 다음 두 문제를 생각할 시간이 별로 없었을 뿐더러 훨씬 더 어려웠습니다. 2번은 깊게 생각 안 했고 3번은 깊게 생각했었는데 삽질만 했습니다…시간이 나면 여기에 모든 Division의 문제 풀이를 작성해보도록 하겠습니다.   ","categories": ["algo"],
+        "tags": ["PS"],
+        "url": "/algo/USACO-2020-January-Contest/",
         "teaser":null}]
