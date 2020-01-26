@@ -43,4 +43,9 @@ var store = [{
         "excerpt":"USACO Platinum을 오랜만에 쳐보았습니다.     대회를 다른 거 하면서 겸사겸사 치룬 와중에 1번 문제는 금방 풀려서 좋았습니다. 그러나 다음 두 문제를 생각할 시간이 별로 없었을 뿐더러 훨씬 더 어려웠습니다. 2번은 깊게 생각 안 했고 3번은 깊게 생각했었는데 삽질만 했습니다…시간이 나면 여기에 모든 Division의 문제 풀이를 작성해보도록 하겠습니다.   ","categories": ["algo"],
         "tags": ["PS"],
         "url": "/algo/USACO-2020-January-Contest/",
+        "teaser":null},{
+        "title": "ICPC 2019 World Finals 팀연습",
+        "excerpt":"2020년의 첫 팀연습을 지난 21일에 19 WF로 돌아보았습니다. 블로그에 아직 제대로 글을 쓰지는 않았지만 제가 작년에 속해 있던 Powered by Zigui 팀이 ICPC 2020 World Finals에 진출하게 되었습니다. 이후 지구이님과 다른 분들께 조언을 많이 듣고, 앞으로 자주 하지 못할 3인 팀연습을 19 WF로 진행하였습니다. 결과는 생각보다는 저조했습니다. 서로 오랜만에 팀연습을...","categories": ["algo"],
+        "tags": ["PS"],
+        "url": "/algo/ICPC-2019-World-Finals-practice/",
         "teaser":null}]
