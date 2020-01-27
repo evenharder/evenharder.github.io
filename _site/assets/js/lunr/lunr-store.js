@@ -48,4 +48,9 @@ var store = [{
         "excerpt":"2020년의 첫 팀연습을 지난 21일에 19 WF로 돌아보았습니다. 블로그에 아직 제대로 글을 쓰지는 않았지만 제가 작년에 속해 있던 Powered by Zigui 팀이 ICPC 2020 World Finals에 진출하게 되었습니다. 이후 지구이님과 다른 분들께 조언을 많이 듣고, 앞으로 자주 하지 못할 3인 팀연습을 19 WF로 진행하였습니다. 결과는 생각보다는 저조했습니다. 서로 오랜만에 팀연습을...","categories": ["algo"],
         "tags": ["PS"],
         "url": "/algo/ICPC-2019-World-Finals-practice/",
+        "teaser":null},{
+        "title": "2019 ICPC Asia Da Nang Regional Contest 후기",
+        "excerpt":"Powered by Zigui (pbz) 팀의 2019 ICPC Asia Da Nang Regional Contest 후기입니다. 돌아오는 비행기를 기다리며 작성한 내용이 많았는데, 그 이후 잊고 살다가 이제야 마무리해봅니다. 2019.12.04 (D-2) 1 WA = 5 Push Up 팀과 BFS_BROUGHT_ME_HERE 팀과 동행했습니다. 모두 멋있는 분들입니다. 비행기를 탔습니다. 밤 9시 15분 출발 비행기가 10시나 되서야 이륙했고,...","categories": ["algo"],
+        "tags": ["PS","ICPC"],
+        "url": "/algo/pdz-2019-danang-regional/",
         "teaser":null}]
