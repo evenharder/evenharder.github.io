@@ -53,4 +53,9 @@ var store = [{
         "excerpt":"Powered by Zigui (pbz) 팀의 2019 ICPC Asia Da Nang Regional Contest 후기입니다. 돌아오는 비행기를 기다리며 작성한 내용이 많았는데, 그 이후 잊고 살다가 이제야 마무리해봅니다. 2019.12.04 (D-2) 1 WA = 5 Push Up 팀과 BFS_BROUGHT_ME_HERE 팀과 동행했습니다. 모두 멋있는 분들입니다. 비행기를 탔습니다. 밤 9시 15분 출발 비행기가 10시나 되서야 이륙했고,...","categories": ["algo"],
         "tags": ["PS","ICPC"],
         "url": "/algo/pdz-2019-danang-regional/",
+        "teaser":null},{
+        "title": "2020년 1월 말/2월 초 Problem Solving",
+        "excerpt":"풀려는 문제를 연습대회로 만들어서 풀기로 마음먹었습니다. 총 13문제입니다. 풀고자 하는 문제는 다음과 같습니다. 많습니다. 1월 말~2월 초에 검수자로 들어가 있는 대회가 2개나 있어서 문제를 많이 풀 수 있을지는 잘 모르겠습니다. 결국 2문제밖에 못 풀고 개인적인 일도 겹쳐서 2월 4일이 되어서야 새로 문제를 풀기 시작했습니다. 셋 그동안 해결한 두 문제 대신...","categories": ["algo"],
+        "tags": ["PS"],
+        "url": "/algo/recent-ps-2020-02-0x/",
         "teaser":null}]
