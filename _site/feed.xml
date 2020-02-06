@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-02-06T13:37:28+09:00</updated><id>/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">2020년 1월 말/2월 초 Problem Solving</title><link href="/algo/recent-ps-2020-02-0x/" rel="alternate" type="text/html" title="2020년 1월 말/2월 초 Problem Solving" /><published>2020-02-04T17:30:00+09:00</published><updated>2020-02-04T17:30:00+09:00</updated><id>/algo/recent-ps-2020-02-0x</id><content type="html" xml:base="/algo/recent-ps-2020-02-0x/">&lt;p&gt;풀려는 문제를 연습대회로 만들어서 풀기로 마음먹었습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-02-07T01:08:49+09:00</updated><id>/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">2020년 1월 말/2월 초 Problem Solving</title><link href="/algo/recent-ps-2020-02-0x/" rel="alternate" type="text/html" title="2020년 1월 말/2월 초 Problem Solving" /><published>2020-02-04T17:30:00+09:00</published><updated>2020-02-04T17:30:00+09:00</updated><id>/algo/recent-ps-2020-02-0x</id><content type="html" xml:base="/algo/recent-ps-2020-02-0x/">&lt;p&gt;풀려는 문제를 연습대회로 만들어서 풀기로 마음먹었습니다.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -87,7 +87,17 @@
 
 &lt;p&gt;탈출구에서는 자명하게 바로 탈출할 수 있습니다. 나머지는 최소 2개의 ‘탈출할 수 있는 정점’과 인접해야 합니다. 안 그러면 탈출할 수 있는 정점 쪽 통로를 막아버리면 되기 때문입니다. 때문에 탈출구를 전부 초깃값 (거리 0)으로 설정해서 다익스트라 알고리즘을 사용하되, 두 번째로 방문했을 때만 값을 취하면 됩니다. 첫 번째로 도달했을 때의 경로가 일반적으로 최적이지만, 문지기가 막아버릴 것이기 때문입니다. 그리고 문제 조건에 의해 두 번째로도 도달할 수 있음이 보장되며, 탈출구가 아닌 다른 정점은 이런 식으로 거리를 계산해야 함이 보여집니다.&lt;/p&gt;
 
-&lt;p&gt;코드도 간결합니다. 역시 IOI 문제입니다.&lt;/p&gt;</content><author><name>Sangheon Lee</name></author><category term="PS" /><summary type="html">풀려는 문제를 연습대회로 만들어서 풀기로 마음먹었습니다.</summary></entry><entry><title type="html">2019 ICPC Asia Da Nang Regional Contest 후기</title><link href="/algo/pdz-2019-danang-regional/" rel="alternate" type="text/html" title="2019 ICPC Asia Da Nang Regional Contest 후기" /><published>2020-01-27T23:00:00+09:00</published><updated>2020-01-27T23:00:00+09:00</updated><id>/algo/pdz-2019-danang-regional</id><content type="html" xml:base="/algo/pdz-2019-danang-regional/">&lt;p&gt;Powered by Zigui (pbz) 팀의 2019 ICPC Asia Da Nang Regional Contest 후기입니다.&lt;/p&gt;
+&lt;p&gt;코드도 간결합니다. 역시 IOI 문제입니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;20200206&quot;&gt;2020.02.06&lt;/h1&gt;
+
+&lt;p&gt;IOI 2011 Elephants를 Crocodile을 풀고 접했는데, 제가 개인적으로 생각하고 있던 문제랑 놀랍도록 일치해서 꼭 풀어봐야겠다고 마음먹었습니다. 풀이는 백날 생각해도 모르겠어서 핵심 아이디어만 슬쩍 보았는데 정말, 정말 감동받았습니다. 깊은 충격을 받고 일부러 구현 쪽 설명과 코드는 검색해보지 않았는데 아직 구현을 어떻게 해야 할지 구체화가 되지 않았습니다. 금방 풀 수 있기를 바라며…&lt;/p&gt;
+
+&lt;h2 id=&quot;n의-존재-amppz-2008-i번&quot;&gt;N의 존재 (AMPPZ 2008 I번)&lt;/h2&gt;
+
+&lt;p&gt;대신 오늘의 뜨거운 감자를 풀었습니다. &lt;a href=&quot;https://www.acmicpc.net/board/view/46220&quot;&gt;Text로 1을 찍어내도 맞는다는 기상천외한 스페셜 저지&lt;/a&gt;가 발견된 문제입니다. 이전에 이미 baby-step giant step을 테스트해보려고 점찍어놓았던 문제인데 이번 기회에 풀어보았습니다.&lt;/p&gt;
+
+&lt;p&gt;전반적인 풀이의 설명과 증명은 &lt;a href=&quot;https://rkm0959.tistory.com/77&quot;&gt;rkm0959님의 포스트&lt;/a&gt;를 참고해주시길 바랍니다.&lt;/p&gt;</content><author><name>Sangheon Lee</name></author><category term="PS" /><summary type="html">풀려는 문제를 연습대회로 만들어서 풀기로 마음먹었습니다.</summary></entry><entry><title type="html">2019 ICPC Asia Da Nang Regional Contest 후기</title><link href="/algo/pdz-2019-danang-regional/" rel="alternate" type="text/html" title="2019 ICPC Asia Da Nang Regional Contest 후기" /><published>2020-01-27T23:00:00+09:00</published><updated>2020-01-27T23:00:00+09:00</updated><id>/algo/pdz-2019-danang-regional</id><content type="html" xml:base="/algo/pdz-2019-danang-regional/">&lt;p&gt;Powered by Zigui (pbz) 팀의 2019 ICPC Asia Da Nang Regional Contest 후기입니다.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
