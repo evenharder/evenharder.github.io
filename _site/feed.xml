@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-02-07T01:08:49+09:00</updated><id>/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">2020년 1월 말/2월 초 Problem Solving</title><link href="/algo/recent-ps-2020-02-0x/" rel="alternate" type="text/html" title="2020년 1월 말/2월 초 Problem Solving" /><published>2020-02-04T17:30:00+09:00</published><updated>2020-02-04T17:30:00+09:00</updated><id>/algo/recent-ps-2020-02-0x</id><content type="html" xml:base="/algo/recent-ps-2020-02-0x/">&lt;p&gt;풀려는 문제를 연습대회로 만들어서 풀기로 마음먹었습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-02-07T23:47:31+09:00</updated><id>/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">2020년 1월 말/2월 초 Problem Solving</title><link href="/algo/recent-ps-2020-02-0x/" rel="alternate" type="text/html" title="2020년 1월 말/2월 초 Problem Solving" /><published>2020-02-04T17:30:00+09:00</published><updated>2020-02-04T17:30:00+09:00</updated><id>/algo/recent-ps-2020-02-0x</id><content type="html" xml:base="/algo/recent-ps-2020-02-0x/">&lt;p&gt;풀려는 문제를 연습대회로 만들어서 풀기로 마음먹었습니다.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -97,7 +97,12 @@
 
 &lt;p&gt;대신 오늘의 뜨거운 감자를 풀었습니다. &lt;a href=&quot;https://www.acmicpc.net/board/view/46220&quot;&gt;Text로 1을 찍어내도 맞는다는 기상천외한 스페셜 저지&lt;/a&gt;가 발견된 문제입니다. 이전에 이미 baby-step giant step을 테스트해보려고 점찍어놓았던 문제인데 이번 기회에 풀어보았습니다.&lt;/p&gt;
 
-&lt;p&gt;전반적인 풀이의 설명과 증명은 &lt;a href=&quot;https://rkm0959.tistory.com/77&quot;&gt;rkm0959님의 포스트&lt;/a&gt;를 참고해주시길 바랍니다.&lt;/p&gt;</content><author><name>Sangheon Lee</name></author><category term="PS" /><summary type="html">풀려는 문제를 연습대회로 만들어서 풀기로 마음먹었습니다.</summary></entry><entry><title type="html">2019 ICPC Asia Da Nang Regional Contest 후기</title><link href="/algo/pdz-2019-danang-regional/" rel="alternate" type="text/html" title="2019 ICPC Asia Da Nang Regional Contest 후기" /><published>2020-01-27T23:00:00+09:00</published><updated>2020-01-27T23:00:00+09:00</updated><id>/algo/pdz-2019-danang-regional</id><content type="html" xml:base="/algo/pdz-2019-danang-regional/">&lt;p&gt;Powered by Zigui (pbz) 팀의 2019 ICPC Asia Da Nang Regional Contest 후기입니다.&lt;/p&gt;
+&lt;p&gt;전반적인 풀이의 설명과 증명은 &lt;a href=&quot;https://rkm0959.tistory.com/77&quot;&gt;rkm0959님의 포스트&lt;/a&gt;를 참고해주시길 바랍니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;20200207&quot;&gt;2020.02.07&lt;/h1&gt;
+&lt;p&gt;코끼리한테 짖밟혔습니다. :cry: 열심히 구현하고 예제가 나와서 제출까지 했으나, 놓친 점이 좀 있는 것 같습니다. 날 잡고 다른 분 코드 보면서 고민해봐야겠습니다…&lt;/p&gt;
+
+&lt;p&gt;주말에는 제2회 IDTcup이 열리는지라 코끼리만 잡고 있을 것 같진 않습니다.&lt;/p&gt;</content><author><name>Sangheon Lee</name></author><category term="PS" /><summary type="html">풀려는 문제를 연습대회로 만들어서 풀기로 마음먹었습니다.</summary></entry><entry><title type="html">2019 ICPC Asia Da Nang Regional Contest 후기</title><link href="/algo/pdz-2019-danang-regional/" rel="alternate" type="text/html" title="2019 ICPC Asia Da Nang Regional Contest 후기" /><published>2020-01-27T23:00:00+09:00</published><updated>2020-01-27T23:00:00+09:00</updated><id>/algo/pdz-2019-danang-regional</id><content type="html" xml:base="/algo/pdz-2019-danang-regional/">&lt;p&gt;Powered by Zigui (pbz) 팀의 2019 ICPC Asia Da Nang Regional Contest 후기입니다.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
