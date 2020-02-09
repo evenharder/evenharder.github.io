@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-02-07T23:47:31+09:00</updated><id>/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">2020년 1월 말/2월 초 Problem Solving</title><link href="/algo/recent-ps-2020-02-0x/" rel="alternate" type="text/html" title="2020년 1월 말/2월 초 Problem Solving" /><published>2020-02-04T17:30:00+09:00</published><updated>2020-02-04T17:30:00+09:00</updated><id>/algo/recent-ps-2020-02-0x</id><content type="html" xml:base="/algo/recent-ps-2020-02-0x/">&lt;p&gt;풀려는 문제를 연습대회로 만들어서 풀기로 마음먹었습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-02-09T11:24:06+09:00</updated><id>/feed.xml</id><title type="html">……!</title><subtitle>derp derp derp</subtitle><author><name>Sangheon Lee</name></author><entry><title type="html">2020년 1월 말/2월 초 Problem Solving</title><link href="/algo/recent-ps-2020-02-0x/" rel="alternate" type="text/html" title="2020년 1월 말/2월 초 Problem Solving" /><published>2020-02-04T17:30:00+09:00</published><updated>2020-02-09T11:00:00+09:00</updated><id>/algo/recent-ps-2020-02-0x</id><content type="html" xml:base="/algo/recent-ps-2020-02-0x/">&lt;p&gt;풀려는 문제를 연습대회로 만들어서 풀기로 마음먹었습니다.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -102,7 +102,42 @@
 &lt;h1 id=&quot;20200207&quot;&gt;2020.02.07&lt;/h1&gt;
 &lt;p&gt;코끼리한테 짖밟혔습니다. :cry: 열심히 구현하고 예제가 나와서 제출까지 했으나, 놓친 점이 좀 있는 것 같습니다. 날 잡고 다른 분 코드 보면서 고민해봐야겠습니다…&lt;/p&gt;
 
-&lt;p&gt;주말에는 제2회 IDTcup이 열리는지라 코끼리만 잡고 있을 것 같진 않습니다.&lt;/p&gt;</content><author><name>Sangheon Lee</name></author><category term="PS" /><summary type="html">풀려는 문제를 연습대회로 만들어서 풀기로 마음먹었습니다.</summary></entry><entry><title type="html">2019 ICPC Asia Da Nang Regional Contest 후기</title><link href="/algo/pdz-2019-danang-regional/" rel="alternate" type="text/html" title="2019 ICPC Asia Da Nang Regional Contest 후기" /><published>2020-01-27T23:00:00+09:00</published><updated>2020-01-27T23:00:00+09:00</updated><id>/algo/pdz-2019-danang-regional</id><content type="html" xml:base="/algo/pdz-2019-danang-regional/">&lt;p&gt;Powered by Zigui (pbz) 팀의 2019 ICPC Asia Da Nang Regional Contest 후기입니다.&lt;/p&gt;
+&lt;p&gt;주말에는 제2회 IDTcup이 열리는지라 코끼리만 잡고 있을 것 같진 않습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;20200208&quot;&gt;2020.02.08&lt;/h1&gt;
+&lt;p&gt;IDTcup은 일요일에 좀 보려고 합니다. 천신만고 끝에 코끼리를 풀었습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;find-c-acm-icpc-2016-bangkok-regional-d번&quot;&gt;Find C (ACM-ICPC 2016 Bangkok Regional D번)&lt;/h2&gt;
+&lt;p&gt;이전에 어떻게 풀지하며 방치했었는데 오늘 갑자기 풀이가 떠올랐습니다.&lt;/p&gt;
+
+&lt;p&gt;한 격자점을 원점으로 평행이동시켜봅시다. 이 문제를 잘 생각해보면, 두 격자점을 잇는 직선을 아주 약간 윗쪽으로 평행이동하는 걸 생각해볼 수 있습니다. 그러면 기존의 직선의 방정식 $ax + by = 0$이 $ax + by = \gcd(a, b)$로 옮겨갈 수 있음을 볼 수 있고, 이 직선 위의 격자점이 그대로 정답이 됩니다. 두 직선 사이에 격자점이 전혀 없기 때문입니다. 이 성질에 대해 조금 더 자세히 알고 싶다면 정수론의 기초 성질 중 하나인 &lt;a href=&quot;https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity&quot;&gt;Bézout’s identity&lt;/a&gt;를 참고해주세요.&lt;/p&gt;
+
+&lt;p&gt;여기까지 도달했으면 남은 건 별 거 없습니다. 확장 유클리드 호제법을 이용해서 격자점을 숭숭 찍어내고 적당히 대칭/평행이동 시켜서 답을 구하면 됩니다. 제가 사용하는 C++14로 작성된 확장 유클리드 호제법 코드입니다.&lt;/p&gt;
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pll&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// ax + by = gcd(a,b). x, y?&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pll&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ext_gcd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;ll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ext_gcd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;dancing-elephants-ioi-2011-5번&quot;&gt;Dancing Elephants (IOI 2011 5번)&lt;/h2&gt;
+&lt;p&gt;어떻게 $O(\sqrt{n})$에 삽입 삭제를 관리하는지 도저히 모르겠어서 풀이를 보았습니다. 다양하게 접근을 할 수 있을 것 같지만 제가 이해하고 짠 풀이는 다음과 같습니다.&lt;/p&gt;
+
+&lt;p&gt;우선, 크기 $O(\sqrt{N})$의 버킷을 $O(\sqrt{N})$개 만듭니다. 각 버킷별로 세 개의 배열을 저장합니다. 첫 번째는 코끼리들의 오름차순 좌표입니다. 두 번째는 이 코끼리부터 이 그룹의 마지막 코끼리까지 찍는데 필요한 카메라 수(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cnt&lt;/code&gt;)입니다. 세 번째는 이 코끼리부터 이 그룹의 마지막 코끼리까지 찍을 때, 카메라가 촬영할 수 있는 가장 높은 좌표값(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nxt&lt;/code&gt;)입니다. 버킷의 크기가 $S$라고 하면, 슬라이딩 윈도우와 간단한 동적 계획법을 통해 $O(S)$에 뒤의 두 값 모두 구할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;코끼리를 더하고 제거하는 과정도 간단히 생각해봅시다. 배열을 밀면 됩니다! 역시 $O(S)$에 해결할 수 있고, 다시 위의 값을 계산해주면 됩니다. 제거하는 건 존재성이 증명되므로 간단하지만 삽입하는 건 약간 생각해주어야 할 부분이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;그럼 이 상황에서 답은 어떻게 구할까요? 마지막으로 찍힌 코끼리의 좌표를 $x$라고 하면, 매 버킷별로 이 $x$의 upper bound를 찾아, 거기 있는 코끼리부터 찍으면 됨을 알 수 있습니다. 만약 이에 해당하는 코끼리가 있다면, 조사해놓은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cnt&lt;/code&gt;값을 (정의에 의해) 그대로 정답에 더하면 됩니다. 이후, $x$를 해당하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nxt&lt;/code&gt;값으로 갱신해주면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;이러면 쿼리당 $O(\sqrt{N} \lg{N})$ 정도에 해결할 수 있습니다. 이러면 점점 버킷의 균일함이 깨지므로 $O(\sqrt{N})$번마다 그룹을 다시 만들어주면 됩니다. 다시 버킷을 구성하는 과정은 $O(N)$이나 $O(N \lg N)$ 정도에 할 수 있으며, $O(\frac{M}{\sqrt{N}})$번 정도만 하면 되므로 총 시간 복잡도는 $O((N + M) \sqrt{N} \lg{N})$이 됩니다.&lt;/p&gt;
+
+&lt;p&gt;Link-cut tree 등의 자료구조를 이용하면 시간복잡도에서 루트를 떼어버릴 수 있는 것 같습니다.&lt;/p&gt;</content><author><name>Sangheon Lee</name></author><category term="PS" /><summary type="html">풀려는 문제를 연습대회로 만들어서 풀기로 마음먹었습니다.</summary></entry><entry><title type="html">2019 ICPC Asia Da Nang Regional Contest 후기</title><link href="/algo/pdz-2019-danang-regional/" rel="alternate" type="text/html" title="2019 ICPC Asia Da Nang Regional Contest 후기" /><published>2020-01-27T23:00:00+09:00</published><updated>2020-01-27T23:00:00+09:00</updated><id>/algo/pdz-2019-danang-regional</id><content type="html" xml:base="/algo/pdz-2019-danang-regional/">&lt;p&gt;Powered by Zigui (pbz) 팀의 2019 ICPC Asia Da Nang Regional Contest 후기입니다.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
