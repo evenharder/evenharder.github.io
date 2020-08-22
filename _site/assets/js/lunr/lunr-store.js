@@ -15,7 +15,7 @@ var store = [{
         "url": "/music/sibelius-violin-concerto/",
         "teaser":null},{
         "title": "블로그에 MathJax 추가",
-        "excerpt":"수식을 보기 좋게 렌더링해주는 MathJax를 추가하였습니다.     $ e^{\\pi i} + 1 = 0$ 같이 인라인 수식도,     같은 수식도 쓸 수 있습니다.   이 포스트 의 도움을 받아 쉽게 추가할 수 있었습니다.   ","categories": ["blog"],
+        "excerpt":"수식을 보기 좋게 렌더링해주는 MathJax를 추가하였습니다.     $ e^{\\pi i} + 1 = 0$ 같이 인라인 수식도,   \\[a^2 + b^2 = c^2\\]  같은 수식도 쓸 수 있습니다.   이 포스트 의 도움을 받아 쉽게 추가할 수 있었습니다.   ","categories": ["blog"],
         "tags": ["Jekyll"],
         "url": "/blog/add-mathjax/",
         "teaser":null},{
@@ -58,4 +58,9 @@ var store = [{
         "excerpt":"풀려는 문제를 연습대회로 만들어서 풀기로 마음먹었습니다. 원래 풀고자 하는 문제들을 목록으로 만들어서 이 문제들만 보려고 했는데, 각 문제들과 같은 대회에 있었던 문제들 중에서도 재밌어보이는 게 많아 그냥 멋대로 잡탕처럼 풀기로 했습니다. 1월 말~2월 초에 검수자로 들어가 있는 대회가 2개나 있어서 그동안은 2문제밖에 못 풀었고, 개인적인 일도 겹쳐서 2월 4일이 되어서야...","categories": ["algo"],
         "tags": ["PS"],
         "url": "/algo/recent-ps-2020-02-0x/",
+        "teaser":null},{
+        "title": "SCPC 2020 Round 1 후기",
+        "excerpt":"매년 열리는 기업주최 알고리즘 대회 중 가장 화려한 축제인 SCPC가 돌아왔습니다. 이번 SCPC 2020 Round 1의 난이도 분포는 전례 없는 스타일이었습니다. 최근 3년간 SCPC 1차 예선은 첫 두 문제가 비슷한 난이도로 쉬운 축을 담당하고 있었습니다. 이번에는 약간의 수학적 지식을 이용하면 쉽게 풀 수 있는 1번 문제 다이어트가 역대 최대 만점자를...","categories": ["algo"],
+        "tags": ["PS"],
+        "url": "/algo/scpc-2020-round-1/",
         "teaser":null}]

@@ -355,8 +355,7 @@
 
 <p>이 원소들은 기본적으로 ‘유효한’ 원소여야 합니다. 때문에 각 컨테이너에 속하지만 유효하지 않은 원소의 개수를 $x_1$, $x_2$라 하면</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\lvert C_1 \rvert - x_1 \leq \lvert C_2 \rvert - x_2 < \lvert C_1 \rvert - x_1 + 1 %]]></script>
+\[\lvert C_1 \rvert - x_1 \leq \lvert C_2 \rvert - x_2 &lt; \lvert C_1 \rvert - x_1 + 1\]
 
 <p>이 성립해야 합니다. 때문에 while문을 체크하면서 원소들을 옮겨주면 됩니다. 이 과정에서 유효하지 않은 원소가 뽑히면 제거합니다. 재미있게도 원소를 컨테이너에서 제거하는 과정은 $\lvert C_i \rvert - x_i$ 값에 영향을 주지 않습니다. 둘 다 1 감소하기 때문입니다. 그렇기에 저는 양쪽의 $\lvert C_i \rvert - x_i$의 균형을 맞춘 후, 양 끝의 유효하지 않은 원소를 제거하였습니다. 어떤 원소가 유효하지 않은 상태인지는 배열 하나만 있으면 충분합니다.</p>
 
@@ -447,7 +446,7 @@
 
 <p>$x$와 서로소인 수가 스택에 있는지는 뫼비우스 함수 등을 써서 포함 배제를 사용하면 됩니다. $cnt_i$를 스택에 있는 수들 중 $i$의 배수의 개수라 하면, 넣고 뺄 때는 $d\,\vert\,x$인 모든 $d$에 대해 값을 바꾸면 되며, $x$와 서로소인 수(즉 최대공약수가 1인 수)의 개수는</p>
 
-<script type="math/tex; mode=display">\sum_{d\,\vert\,x} \mu(d) \cdot cnt_d</script>
+\[\sum_{d\,\vert\,x} \mu(d) \cdot cnt_d\]
 
 <p>로 계산할 수 있습니다.</p>
 
@@ -566,6 +565,36 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
+        <a href="/algo/scpc-2020-round-1/" rel="permalink">SCPC 2020 Round 1 후기
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">매년 열리는 기업주최 알고리즘 대회 중 가장 화려한 축제인 SCPC가 돌아왔습니다.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
         <a href="/algo/recent-ps-2020-02-0x/" rel="permalink">2020년 1월 말/2월 초 Problem Solving
 </a>
       
@@ -641,36 +670,6 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">2020년의 첫 팀연습을 지난 21일에 19 WF로 돌아보았습니다.
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/algo/USACO-2020-January-Contest/" rel="permalink">USACO 2020 January Contest
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">USACO Platinum을 오랜만에 쳐보았습니다.
 
 </p>
   </article>

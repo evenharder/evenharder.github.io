@@ -301,7 +301,7 @@
 
 
 
-  3 분 소요
+  4 분 소요
 
 </p>
           
@@ -383,19 +383,19 @@
 
 <p>선형 점화식과 관련된 유명한 트릭을 사용해야 합니다. $X_n = \alpha^n + \beta^n$이라 정의할 때,</p>
 
-<script type="math/tex; mode=display">X_{n+2} = (\alpha + \beta) X_{n+1} - \alpha\beta X_n</script>
+\[X_{n+2} = (\alpha + \beta) X_{n+1} - \alpha\beta X_n\]
 
 <p>이 성립합니다. 식을 전개하면 그대로 나옵니다.</p>
 
 <p>때문에 이차방정식의 근과 계수와의 관계처럼, $\alpha = 3 + \sqrt{5}$, $\beta = 3 - \sqrt{5}$로 잡아봅시다. 그러면</p>
 
-<script type="math/tex; mode=display">X_{n+2} = 6 X_{n+1} - 4 X_n</script>
+\[X_{n+2} = 6 X_{n+1} - 4 X_n\]
 
 <p>의 식이 유도됩니다. 이 때, $n$이 양의 정수이면 $0 &lt; \beta^n &lt; 1$임을 알 수 있습니다. 그러므로 $X_n$의 마지막 3자리(즉$\mod 1000$)를 알 수 있으면, $\alpha^n$의 마지막 3자리를 알 수 있습니다.</p>
 
 <p>위 점화식을 통해 $X_{n}$을 알아내는 대표적인 방법은 행렬곱이지만, 저는 $X_n$의 본래 정의에 입각하여</p>
 
-<script type="math/tex; mode=display">X_{2n} = X_n^2 - 2 \times (\alpha\beta)^n, ~~ X_{2n+1} = X_nX_{n+1} - (\alpha+\beta)(\alpha\beta)^n</script>
+\[X_{2n} = X_n^2 - 2 \times (\alpha\beta)^n, ~~ X_{2n+1} = X_nX_{n+1} - (\alpha+\beta)(\alpha\beta)^n\]
 
 <p>를 이끌어내어 재귀적으로 계산하였습니다. 이 과정에서 조사하게 되는 $X_i$의 개수는 $O(\lg n)$개 정도이므로, <code class="language-plaintext highlighter-rouge">std::map</code> 같은 map 형태의 자료구조를 이용하여 memoization을 통해 계산할 수도 있습니다.</p>
 
@@ -407,20 +407,19 @@
 
 <p>$\text{lcm}(a, b) = ab / \gcd(a, b)$이므로, $\gcd$를 잘 처리할 수 있는 방법을 생각해보아야 합니다. 여기서 특수한 수열 $w_i$를 정의하도록 하겠습니다. 수열 ${w_i}$는 다음을 만족합니다.</p>
 
-<script type="math/tex; mode=display">\sum_{d | k} w_d = \frac{1}{k}</script>
+\[\sum_{d | k} w_d = \frac{1}{k}\]
 
 <p>에라토스테네스의 체를 구하는 것처럼, $w_1$부터 $w_n$까지 $O(n \lg n \lg \lg n)$에 구할 수 있습니다.</p>
 
 <p>그 다음 계산하고자 하는 값은 $\sum_{i}^{n}\sum_{j}^{n} \text{lcm}(i, j)$입니다. $i = j$일 때만 제외하고 2로 나누면 구하고자 하는 값이 나옴을 알 수 있습니다. 여기서 식을 조금 변형해보겠습니다.</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align*}
-\sum_{i}^{n}\sum_{j}^{n} \text{lcm}(i, j) &= \sum_{i}^{n}\sum_{j}^{n} \frac{ij}{\gcd(i, j)} \\
-&= \sum_{i}^{n}\sum_{j}^{n}\left( ij\sum_{d|\gcd(i, j)} w_d\right)\\
-&= \sum_{d}^n\sum_{d|i}^n\sum_{d|j}^n ij w_d\\
-&= \sum_{d}^n w_d \sum_{d|i}^n\sum_{d|j}^n ij\\
-&= \sum_{d}^n w_d (\sum_{d|i}^n)^2
-\end{align*} %]]></script>
+\[\begin{align*}
+\sum_{i}^{n}\sum_{j}^{n} \text{lcm}(i, j) &amp;= \sum_{i}^{n}\sum_{j}^{n} \frac{ij}{\gcd(i, j)} \\
+&amp;= \sum_{i}^{n}\sum_{j}^{n}\left( ij\sum_{d|\gcd(i, j)} w_d\right)\\
+&amp;= \sum_{d}^n\sum_{d|i}^n\sum_{d|j}^n ij w_d\\
+&amp;= \sum_{d}^n w_d \sum_{d|i}^n\sum_{d|j}^n ij\\
+&amp;= \sum_{d}^n w_d (\sum_{d|i}^n)^2
+\end{align*}\]
 
 <p>위와 같이 변형하면, 1부터 $n$까지 중 $d$의 배수들의 합을 통해 위 식을 계산할 수 있고, 거기에서 제곱합을 빼서 원래 구하고자 했던 값을 계산할 수 있습니다. 수가 연속되어 있으므로 합공식을 이용하여 총 $O(n)$에 간단히 전처리할 수 있습니다.</p>
 
@@ -539,6 +538,36 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
+        <a href="/algo/scpc-2020-round-1/" rel="permalink">SCPC 2020 Round 1 후기
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">매년 열리는 기업주최 알고리즘 대회 중 가장 화려한 축제인 SCPC가 돌아왔습니다.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
         <a href="/algo/recent-ps-2020-02-0x/" rel="permalink">2020년 1월 말/2월 초 Problem Solving
 </a>
       
@@ -614,36 +643,6 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">2020년의 첫 팀연습을 지난 21일에 19 WF로 돌아보았습니다.
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/algo/USACO-2020-January-Contest/" rel="permalink">USACO 2020 January Contest
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  최대 1 분 소요
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">USACO Platinum을 오랜만에 쳐보았습니다.
 
 </p>
   </article>
