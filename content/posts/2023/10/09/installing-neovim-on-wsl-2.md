@@ -7,9 +7,8 @@ tags:
   - wsl2
   - neovim
   - lazyvim
-  - mason
-  - null-ls
-  - none-ls
+  - mason.nvim null-ls.nvim
+  - none-ls.nvim
   - clangd
 ---
 
@@ -102,6 +101,8 @@ return {
 - `css-lsp`: mason 이용
 
 ## `none-ls.nvim` 설정
+
+> **경고!** `none-ls.nvim`은 LazyVim v10 기준 기본 플러그인에서 제외되었으며, 기본 포매터는 `conform.nvim`으로 변경되었습니다. migration 관련해선 [LazyVim v10으로 업데이트하기 포스트](/posts/2023/10/29/updating-lazyvim-to-v10/)를 참고 바랍니다.
 
 [`null-ls.nvim`](https://github.com/jose-elias-alvarez/null-ls.nvim)은 LSP가 아닌 프로그램도 LSP 서버처럼 작동할 수 있게 도와주는 플러그인인데, 2023년 8월 12일부로 개발이 중단되었습니다. 현재는 community fork인 [`none-ls.nvim`](https://github.com/nvimtools/none-ls.nvim)에서 유지보수가 계속되고 있습니다.
 
