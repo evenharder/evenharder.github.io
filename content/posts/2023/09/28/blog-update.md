@@ -7,6 +7,7 @@ tags:
   - tech
   - hugo
   - hugo-theme-meme
+summary: 블로그를 Jekyll 기반에서 Hugo 기반으로 새단장했습니다!
 ---
 
 블로그를 Jekyll 기반에서 Hugo 기반으로 새단장했습니다!

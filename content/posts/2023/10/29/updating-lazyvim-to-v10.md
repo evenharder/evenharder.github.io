@@ -8,6 +8,7 @@ tags:
   - lazyvim
   - conform.nvim
   - nvim-lint
+summary: LazyVim을 v10으로 업데이트하면서 생긴 변경사항을 적용했습니다.
 ---
 
 LazyVim이 [v10으로 업데이트되면서](https://github.com/LazyVim/LazyVim/releases/tag/v10.0.0) 몇몇 플러그인 관련 breaking change가 있었습니다. 이 포스트에서는 이와 관련한 플러그인 설정 변경을 다룹니다.

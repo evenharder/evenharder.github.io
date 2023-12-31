@@ -7,6 +7,7 @@ tags:
   - PS
   - ICPC
 toc: true
+summary: 2019 ICPC Asia Da Nang Regional Contest에 대한 오래된 후기입니다.
 ---
 
 

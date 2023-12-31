@@ -10,6 +10,7 @@ tags:
   - mason.nvim null-ls.nvim
   - none-ls.nvim
   - clangd
+summary: 갓 다운받은 WSL 2 Ubuntu 22.04.2 LTS에 Neovim (+LazyVim)을 설치하고 LSP와 formatter를 설정했습니다.
 ---
 
 갓 다운받은 WSL 2 Ubuntu 22.04.2 LTS에 Neovim (+LazyVim)을 설치하고 LSP와 formatter를 설정했습니다.
