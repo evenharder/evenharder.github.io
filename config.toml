@@ -882,7 +882,7 @@ uglyURLs = false
 
     displayTOCTitle = true
 
-    displayTOCNum = true
+    displayTOCNum = false
     # Note: *global settings*
     #       `tocNum` in post’s Front Matter
     #       has a higher priority than here
