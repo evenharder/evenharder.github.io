@@ -1,6 +1,6 @@
 ---
 title: "Good Bye, BOJ 2023! 참가 후기 / 업솔빙"
-date: 2023-12-31T13:00:00+09:00
+date: 2024-01-01T21:40:00+09:00
 categories:
   - algo
 tags:
