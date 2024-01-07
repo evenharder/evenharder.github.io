@@ -71,9 +71,9 @@ $env:DISPLAY="127.0.0.1:0.0"
 function fn_xssh { ssh -Y $args }
 Set-Alias xssh fn_xssh
 ```
-ssh 연결에서 시행착오가 많았습니다. public key를 등록했는데도 ssh에서 계속 password를 요청해서 `-v` 옵션도 넣어보는 등 다양한 시도를 해봤으나 client 쪽 문제는 아니어보였습니다. remote의 `/var/log/secure`를 확인해보니 `~/.ssh/authorized_keys`의 권한이 644가 아닌 기본값 664로 되어있어 생긴 문제T였습니다. Linux 구석구석을 언젠가 공부해봐야겠습니다.
+ssh 연결에서 시행착오가 많았습니다. public key를 등록했는데도 ssh에서 계속 password를 요청해서 `-v` 옵션도 넣어보는 등 다양한 시도를 해봤으나 client 쪽 문제는 아니어보였습니다. remote의 `/var/log/secure`를 확인해보니 `~/.ssh/authorized_keys`의 권한이 644가 아닌 기본값 664로 되어있어 생긴 문제였습니다. Linux 구석구석을 언젠가 공부해봐야겠습니다.
 
-여기까지 설정하니 WezTerm을 통해 seamless한 remote Neovim 편집이 가능했고 [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)을 통해 실시간 렌더링도 확인할 수 있었습니다. 방화벽 때문에 firefox가 조금 딜레이가 있긴 했지만 충분히 만족스러웠습니다. 환경설정이 정말 중요하다는 생각을 느꼈습니다.
+여기까지 설정하니 WezTerm을 통해 seamless한 remote Neovim 편집이 가능했고 [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)을 통해 실시간 렌더링도 확인할 수 있었습니다. 방화벽 때문에 firefox가 조금 딜레이가 있긴 했지만 충분히 만족스러웠습니다. 오늘도 Neovim을 접하게 되어 감사한 하루입니다.
 
 ## 결론
 개발환경 설정은 자신에게의 투자임을 느꼈습니다. 단기적으로는 시간 소모가 클 수 있으나 장기적으로는 이를 훨씬 상회하는 효과를 낼 수 있어 보입니다. 앞으로의 문서 작성이 더 기대가 됩니다.
