@@ -89,6 +89,8 @@ VimEnter 2023에서 재열님의 명강연을 들은 후 WezTerm와 tmuxinator�
 - 개발 서적: CS:APP나 OSTEP 등의 서적을 읽어보려고 했으나 2024년 초의 의욕과는 달리 거의 읽지 못했습니다. 오히려 [C++ Reference](https://en.cppreference.com/w/)과 [Intel Intrinsic Guide](https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html)만 잔뜩 읽었습니다.
 - 운영체제: OS의 기초도 많이 복습하지는 못했습니다.
 - 통신 기술: 업무랑 깊게 관련되어 있는 분야지만 체계적으로 배우기보다는 필요한 지식을 조금씩 더 습득했습니다.
+- Problem Solving: 한때는 Problem Solving이 제 인생의 가장 큰 관심사 중 하나였지만 대학을 한참 전에 졸업한 이상 동기부여가 거의 안 되었습니다. 그래도 커뮤니티에 계속 기여하고 싶어 [UCPC 2024](https://2024.ucpc.me/)에서는 후원과 검수를 진행했고, 2024 ICPC Asia Seoul Regional의 Call for task에 낸 문제가 본선의 가장 쉬운 문제인 [A번 Bottles](https://www.acmicpc.net/problem/32829)로 선정되었습니다.
+
 
 ## 느낀 점
 
